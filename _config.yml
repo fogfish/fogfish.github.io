@@ -1,0 +1,22 @@
+title: i.am.fog.fish
+
+baseurl: ""
+
+url: "" # 
+
+twitter_username: _fogfish_
+github_username:  fogfish
+
+# Build settings
+markdown: kramdown
+theme: just-the-docs
+plugins:
+  - jekyll-feed
+
+search_enabled: true
+
+aux_links:
+  "Twitter":
+    - "https://twitter.com/_fogfish_"
+  "GitHub":
+    - "https://github.com/fogfish"
