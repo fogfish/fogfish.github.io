@@ -2,7 +2,7 @@ title: i.am.fog.fish
 
 baseurl: ""
 
-url: "" # 
+url: "" 
 
 twitter_username: _fogfish_
 github_username:  fogfish
@@ -13,7 +13,7 @@ theme: just-the-docs
 plugins:
   - jekyll-feed
 
-search_enabled: true
+# search_enabled: true
 
 aux_links:
   "Twitter":
