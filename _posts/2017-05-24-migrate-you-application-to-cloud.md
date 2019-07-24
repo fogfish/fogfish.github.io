@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  Migrate Your Application To Cloud Age
-categories: microservices architecture
 ---
 
 # Migrate Your Application To Cloud Age

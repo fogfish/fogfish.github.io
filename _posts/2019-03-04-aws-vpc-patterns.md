@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  Public and Privately Routed VPC pattern
-categories: aws networking infrastructure vpc
 ---
 
 # Public and Privately Routed VPC pattern
