@@ -3,6 +3,7 @@ layout: default
 title: About
 permalink: /about
 nav_order: 3
+search_exclude: true
 ---
 
 # 𝕯𝖒𝖎𝖙𝖗𝖞
