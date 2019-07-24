@@ -3,6 +3,7 @@ baseurl: ""
 url: "http://i.am.fog.fish"
 
 theme: just-the-docs
+remote_theme: pmarsceill/just-the-docs
 
 search_enabled: true
 
