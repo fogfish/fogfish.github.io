@@ -23,3 +23,10 @@ nav_order: 1
 #### Assess
 
 [MIT Deep Learning Book](https://github.com/janishar/mit-deep-learning-book-pdf) - This is the most comprehensive book available on the deep learning. Written by three experts in the field, Deep Learning is the only comprehensive book on the subject.
+
+[Breaking CAPTCHA Using Machine Learning in 0.05 Seconds](https://medium.com/towards-artificial-intelligence/breaking-captcha-using-machine-learning-in-0-05-seconds-9feefb997694) - technique uses GAN networks to synthesize process of CAPTCHA generation. THe solution is extremely interesting for other problem domains with absence of large datasets. 
+
+#### Adopt
+
+[The Rise of Generative Adversarial Networks](https://blog.usejournal.com/the-rise-of-generative-adversarial-networks-be52d424e517) - Overview of GAN networks. They can generate high-quality images, enhance photos, generate images from text, convert images from one domain to another, change the appearance of the face image as age progresses and many more. The list is endless.
+
