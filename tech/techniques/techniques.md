@@ -30,3 +30,12 @@ nav_order: 2
 
 [The Rise of Generative Adversarial Networks](https://blog.usejournal.com/the-rise-of-generative-adversarial-networks-be52d424e517) - Overview of GAN networks. They can generate high-quality images, enhance photos, generate images from text, convert images from one domain to another, change the appearance of the face image as age progresses and many more. The list is endless.
 
+
+## User Experience
+
+#### Adopt
+
+[Design Better Forms](https://uxdesign.cc/design-better-forms-96fadca0f49c) - Highlights a common mistakes designer makes on Web Forms and How to avoid them.
+
+[Alternatives to Placeholder Text](https://uxdesign.cc/alternatives-to-placeholder-text-13f430abc56f) - Improve form usability by addressing the perils of placeholders. 
+
