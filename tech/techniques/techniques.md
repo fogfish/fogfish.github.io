@@ -2,7 +2,7 @@
 layout: default
 title: Techniques
 parent: Technology Radar
-nav_order: 1
+nav_order: 2
 ---
 
 # Techniques

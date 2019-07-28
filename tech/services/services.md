@@ -2,7 +2,7 @@
 layout: default
 title: Services
 parent: Technology Radar
-nav_order: 5
+nav_order: 6
 ---
 
 # Services
