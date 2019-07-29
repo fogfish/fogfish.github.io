@@ -68,22 +68,22 @@ You'll be able to build reusable cloud component library and automate infrastruc
 
 Let's try to define pure functions to solve embarrassingly obvious composition problem. We need to shift our perspective from category of classes to category of pure functions.
 
-Let's abstract our Infrastructure as a Code in terms of pure functions. Functions that takes a parent cdk.Construct and creates a new one.
+Let's abstract our Infrastructure as a Code in terms of pure functions. Functions that takes a parent cdk.Construct and creates a new element.
 
 ```typescript
-type IaaC = (parent: cdk.Construct) => cdk.Construct
+type IaaC<T> = (parent: cdk.Construct) => T
 ```
 
 The composition is about building efficiently parent-children relations due to nature of AWS CDK framework.
 
 ```typescript
-type Compose = (parent: cdk.Construct, children: IaaC) => cdk.Construct
+type Compose = <T>(parent: cdk.Construct, children: IaaC<T>) => cdk.Construct
 ```
 
 Finally, we are able to define `_` as compose function
 
 ```typescript
-function _(parent: cdk.Construct, fn: IaaC): cdk.Construct {
+function _<T>(parent: cdk.Construct, fn: IaaC<T>): cdk.Construct {
   root instanceof cdk.App
     ? fn(new cdk.Stack(parent, fn.name))
     : fn(new cdk.Construct(parent, fn.name))
