@@ -66,30 +66,40 @@ You'll be able to build reusable cloud component library and automate infrastruc
 
 ## Pure functions
 
-Let's try to define pure functions to solve embarrassingly obvious composition problem. We need to shift our perspective from category of classes to category of pure functions. The composition operator `_` becomes:
+Let's try to define pure functions to solve embarrassingly obvious composition problem. We need to shift our perspective from category of classes to category of pure functions.
+
+Let's abstract our Infrastructure as a Code in terms of pure functions. Functions that takes a parent cdk.Construct and creates a new one.
 
 ```typescript
-type IaaC = (scope: cdk.Construct) => void
+type IaaC = (parent: cdk.Construct) => cdk.Construct
+```
 
-function _(root: cdk.Construct, fn: IaaC): cdk.Construct {
+The composition is about building efficiently parent-children relations due to nature of AWS CDK framework.
+
+```typescript
+type Compose = (parent: cdk.Construct, children: IaaC) => cdk.Construct
+```
+
+Finally, we are able to define `_` as compose function
+
+```typescript
+function _(parent: cdk.Construct, fn: IaaC): cdk.Construct {
   root instanceof cdk.App
-    ? fn(new cdk.Stack(root, fn.name))
-    : fn(new cdk.Construct(root, fn.name))
-  return root
+    ? fn(new cdk.Stack(parent, fn.name))
+    : fn(new cdk.Construct(parent, fn.name))
+  return parent
 }
 ```
 
 The definition of our cloud resources becomes reflected in terms of pure functions
 
 ```typescript
-
-function MyResource(scope: cdk.Construct) {
-   ...
+function MyResource(scope: cdk.Construct): cdk.Construct {
+   return ...
 }
 
-function MyStack(stack: cdk.Construct) {
-   _(stack, MyResource)
-   _(stack, ...)
+function MyStack(stack: cdk.Construct): cdk.Construct {
+   return _(stack, MyResource)
 }
 
 const app = new cdk.App()
@@ -97,5 +107,12 @@ _(app, MyStack)
 app.synth()
 ```
 
-The usage of pure functions gives possibility to decompose the infrastructure definition into small functions. Each obviously correct and self explainable.
+Now, the infrastructure is decomposable using small function. Each obviously correct and self explainable. This example eliminates boilerplate code of class constructions.
+
+Here are some of the benefits:
+* Infrastructure intent is clear and obvious
+* It becomes testable and easier to reason about
+* Easier to debug and maintain 
+
+See the gist of [`pure.ts`](https://gist.github.com/fogfish/e97ef042db0afe011149873a56f79d93).
 
