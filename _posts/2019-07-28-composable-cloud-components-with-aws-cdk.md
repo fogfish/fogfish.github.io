@@ -116,3 +116,4 @@ Here are some of the benefits:
 
 See the gist of [`pure.ts`](https://gist.github.com/fogfish/e97ef042db0afe011149873a56f79d93).
 
+Feel free to share your comments either to [Twitter](https://twitter.com/_fogfish_/status/1156165926619963392) or [GitHub issue](https://github.com/aws/aws-cdk/issues/3481).
