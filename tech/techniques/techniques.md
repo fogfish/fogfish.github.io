@@ -17,6 +17,12 @@ nav_order: 2
 
 [Base: An Acid Alternative](https://queue.acm.org/detail.cfm?id=1394128) - In partitioned databases, trading some consistency for availability can lead to dramatic improvements in scalability. It discusses an applicability of persistent message queues to achieve eventual consistency and recovery from failures.
 
+#### Adopt
+
+[Command Query Responsibility Segregation (CQRS) pattern](https://martinfowler.com/bliki/CQRS.html) - The technique defines an alternative approach to CURD. At its heart is the notion that you can use a different model to update information than the model you use to read information. CQRS patterns simplifies design, scalability and fault-tolerance of write stream especially when it accomplished by Event Sourcing (streaming). It impacts on the reader's consistency which requires special caching techniques if pattern is used in Web application. 
+
+[Exposing CQRS Through a RESTful API](https://www.infoq.com/articles/rest-api-on-cqrs/) - Exposing a CQRS service through a REST API is not only possible but the richness of HTTP semantics allows for a fluent and efficient API to be built on top. This process involves building a public domain composed of commands, queries (input/output messages) and resources that are concurrency and caching aware. Also we need to map internal domain(s queries and commands to HTTP verbs and use status codes to convey state transitions and exceptions 
+
 
 ## Machine Learning
 
