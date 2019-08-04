@@ -20,3 +20,12 @@ nav_order: 4
 [Implementing, and Understanding Type Classes](http://okmij.org/ftp/Computation/typeclass.html) - This page looks behind the scenes of the abstraction of parametric overloading, also known as bounded polymorphism, or just `type classes`. Seeing the implementation makes type classes appear simpler, friendlier, more comfortable to use.
 
 [Solving Embarrassingly Obvious Problems in Erlang](https://blog.usejournal.com/solving-embarrassingly-obvious-problems-in-erlang-e3f21a6203cc) - the article is helpful for any one how commits large function. It guides about decomposition of large functions using real life example. The technique is applicable to any language despite it refers to Erlang. 
+
+
+## TypeScript
+
+#### Adopt
+
+[TYPESCRIPT TYPE INFERENCE GUIDE](http://ducin.it/typescript-type-inference-guide) - Type Inference is one of the most important features we should master, as we progress with using TypeScript. One of the most useful resources when getting started with TypeScript is the official handbook. However, it doesn't go too deep into type inference and doesn't provide practical tips on how to leverage it. 
+
+
