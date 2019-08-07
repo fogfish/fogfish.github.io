@@ -29,6 +29,7 @@ The independence property is vital for real-time consumer engagement. It allows 
 
 The discussed solution maps to high-level stream processing architecture that is built from few side-effect free stages: streaming part ingests events, enrichment part augments events with additional knowledge and deducts part that build a genome from event and prior knowledge.  The core part of this solution is a semantical storage that holds consumer behavior and data integration interface Datalog. The proof-of-concept delivery shows the storage and query language in actions.
 
+{: .lh-0 }
 ```
                            +---------+
                logs        |Internal |
