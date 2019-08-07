@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  Real-time behavior analysis
+title:  Real-time consumer engagement
 ---
 
-# Real-time behavior analysis
+# Real-time consumer engagement
 
 The age of digital content consumption requires efficiently respond to consumer demand. There are needs to engage and create relevant experience for each individual consumer. The interactive marketing is not just about BigData, it is all about knowing consumers, getting to known consumer preferences and emerging trends from both consumer, retailer and content provider. A high resolution, real-time consumer engagement is an opportunity to enhance traditional ETL analytics portfolio.
 
