@@ -37,7 +37,7 @@ Highly available data warehouses to store facts about geo-spacial objects. The w
 
 ### Real-time Consumer Engagement
 
-High-resolution, real-time consumer analytics to trace behavior and make immediate decision while consumer interacts with user experience. The system is enhanced with machine learning algorithms to automatically respond on consumer demand.
+High-resolution, real-time consumer analytics to trace behavior and make immediate decision while consumer interacts with user experience. The system is enhanced with machine learning algorithms to automatically respond on consumer demand. Please see [my post](/2015/03/17/real-time-consumer-engagement.html) about this subject.
 
 
 ### Time-Series Database as a Service
