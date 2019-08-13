@@ -222,6 +222,8 @@ A few times in this post, I've pitched a requirements to offload a functionality
 
 TypeClasses are not first-class citizen in the TypeScript language. Additionally, the language do not provide a concept of implicit that remains to be a good solution for ad-hoc polymorphism in Scala. However, TypeScript has advanced type system that allow us to write type classes. The syntax and implementation is not straight forwards at the first glance but depicted technique helps to achieve it.
 
+Looking for feedback, comments and discussion on [Twitter](https://twitter.com/_fogfish_/status/1161241361242349568)
+
 
 ## References
 
