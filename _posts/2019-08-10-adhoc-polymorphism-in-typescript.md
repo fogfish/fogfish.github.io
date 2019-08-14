@@ -5,7 +5,7 @@ title:  Ad-Hoc polymorphism in TypeScript with implicit context
 
 # Ad-hoc polymorphism in TypeScript with implicit context.
 
-> Ad􏰀hoc polymorphism occurs when a function is defined over several different types􏰌 acting in a dif􏰀ferent way for each type􏰍.
+> Ad-hoc polymorphism occurs when a function is defined over several different types acting in a dif􏰀ferent way for each type􏰍.
 
 Overloading is a most simplest example of ad-hoc polymorphism. It associates a single function with many implementations. TypeScript supports only dynamic [overloading](https://www.typescriptlang.org/docs/handbook/functions.html#overloads) - you have to execute runtime checks of types and choose appropriate behavior using if-else syntax. TypeScript compilation output a pure JavaScript code. Its dynamic nature do not allow to implement overloading similarly to other languages.
 
@@ -216,6 +216,28 @@ console.log(show(true))    // compile time error
 ```
 
 A few times in this post, I've pitched a requirements to offload a functionality outside of each specific type definition and implement it in different modules or libraries. TypeScript supports a [declaration merging](https://www.typescriptlang.org/docs/handbook/declaration-merging.html). This features helps us to build a library of type classes.
+
+## Limitations
+
+Unfortunately, proposed approach do not work out of the box for all type, especially those that uses built-in scalar type to represent an instance, because type analysis happens at run-time. As an example, the following types are casted to `String` and `Number` respectively.
+
+```typescript
+type MyTerms = 'hello' | 'world' | '.'
+
+enum MyEnum { A = 1, B, C} 
+``` 
+
+The plain JSON object and interfaces are another example that requires a special techniques to give a hint to type analysis
+
+```typescript
+interface User {
+  name: string
+}
+
+const user: User = <User>JSON.parse('{"name": "joe"}')
+``` 
+
+The runtime type analysis fails because `constructor.name` returns an `Object` type for it. You can either use a [discriminated unions](https://www.typescriptlang.org/docs/handbook/advanced-types.html#discriminated-unions) to explicitly label each external object or cast object to the class.
 
 
 ## Conclusion
