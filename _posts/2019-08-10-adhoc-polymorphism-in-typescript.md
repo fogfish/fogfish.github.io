@@ -5,7 +5,7 @@ title:  Ad-Hoc polymorphism in TypeScript with implicit context
 
 # Ad-hoc polymorphism in TypeScript with implicit context.
 
-> Ad-hoc polymorphism occurs when a function is defined over several different types acting in a dif􏰀ferent way for each type􏰍.
+> Ad-hoc polymorphism occurs when a function is defined over several different types acting in a different way for each type.
 
 Overloading is a most simplest example of ad-hoc polymorphism. It associates a single function with many implementations. TypeScript supports only dynamic [overloading](https://www.typescriptlang.org/docs/handbook/functions.html#overloads) - you have to execute runtime checks of types and choose appropriate behavior using if-else syntax. TypeScript compilation output a pure JavaScript code. Its dynamic nature do not allow to implement overloading similarly to other languages.
 
@@ -156,7 +156,7 @@ The implementation of `Cat<T>` is inspired by higher-kinded polymorphism feature
 type Cat<T> = Cats[T]
 ```
 
-We just projects a type T, which is eventually type of all know keys of implicit context, to an required type. Unfortunately, it required definition on another dictionary `interface Cats{}` to store all known types. The final definition of type `Cat<T>` is
+We just projects a type T, which is eventually type of all know keys of implicit context, to an required type. Unfortunately, it required definition on another dictionary `interface Cats {}` to store all known types. The final definition of type `Cat<T>` is
 
 ```typescript
 interface Cats {}
@@ -215,16 +215,73 @@ console.log(show(true))    // compile time error
                            // to parameter of type 'string | number'
 ```
 
-A few times in this post, I've pitched a requirements to offload a functionality outside of each specific type definition and implement it in different modules or libraries. TypeScript supports a [declaration merging](https://www.typescriptlang.org/docs/handbook/declaration-merging.html). This features helps us to build a library of type classes.
+## Type Class library
+
+A few times in this post, I've pitched a requirements to offload a functionality outside of each specific type definition and implement it in different modules or libraries. TypeScript supports a [declaration merging](https://www.typescriptlang.org/docs/handbook/declaration-merging.html). This features helps us to build a library of type classes. 
+
+```typescript
+// typeclass.ts - basic types 
+export interface Cats {}
+
+export type Cat<T extends keyof Cats> = Cats[T]
+
+export type Implicit = {[key: string]: any}
+
+//
+// show.ts - generic algorithm
+interface Show<A> {
+  show(a: A): string
+}
+
+export function show<A extends Implicit, T extends keyof Cats>(implicitly: A): (x: Cat<T>) => string {
+  return (x) => {
+    return (<any>implicitly[x.constructor.name]).show(x)
+  }
+}
+
+//
+// int.ts - support for data type
+class IntCanShow implements Show<number> {
+  show(int: number): string {
+    return `int ${int}`
+  }
+}
+
+declare module './typeclass' {
+  interface Cats {Number: number}
+}
+
+//
+// app.ts - use type classes
+namespace Show {
+  export const Number = new IntCanShow
+  // ...
+}
+const myShow = show(Show)
+
+myShow(10)
+```
+
+You have to be aware of ambient context limitation. It is only allowed to use string or numeric literal as const initializers. 
+
+```typescript
+declare module './typeclass' {
+  namespace Show {
+    export const Number = new IntCanShow
+  }
+}
+```
+
+The following code fails. Therefore, the dictionary have to be declared in single file.
 
 ## Limitations
 
-Unfortunately, proposed approach do not work out of the box for all type, especially those that uses built-in scalar type to represent an instance, because type analysis happens at run-time. As an example, the following types are casted to `String` and `Number` respectively.
+Unfortunately, proposed approach do not work out of the box for all types, especially those that uses built-in scalar type to represent an instance, because type analysis happens at run-time. As an example, the following types are casted to `String` and `Number` respectively.
 
 ```typescript
 type MyTerms = 'hello' | 'world' | '.'
 
-enum MyEnum { A = 1, B, C} 
+enum MyEnum { A = 1, B, C }
 ``` 
 
 The plain JSON object and interfaces are another example that requires a special techniques to give a hint to type analysis
