@@ -224,3 +224,6 @@ function use<T extends Pairs<T>>(resources: Product<T>): Effect<T>
 
 The discussed notations complements AWS CDK with the *purely functional composition*. This style of development builds a new things from small reusable "cloud components". A shift from category of classes to category of pure functions simplifies the development by **scraping boilerplate**.
 
+The features discussed here are implemented at [aws-cdk-pure library](https://github.com/fogfish/aws-cdk-pure).  
+
+Feel free to share your comments and thought on [Twitter](https://twitter.com/_fogfish_/status/1164894358321139712) or raise and issue to [GitHub](https://github.com/aws/aws-cdk-pure).
