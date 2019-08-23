@@ -80,7 +80,7 @@ The composition is about building efficiently parent-children relations due to n
 type Compose = <T>(parent: cdk.Construct, children: IaaC<T>) => cdk.Construct
 ```
 
-Finally, we are able to define `_` as compose function
+Finally, we are able to define `_` as compose operator
 
 ```typescript
 function _<T>(parent: cdk.Construct, fn: IaaC<T>): cdk.Construct {
