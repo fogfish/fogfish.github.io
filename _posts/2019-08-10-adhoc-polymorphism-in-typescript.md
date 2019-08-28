@@ -1,6 +1,8 @@
 ---
 layout: post
 title:  Ad-Hoc polymorphism in TypeScript with implicit context
+description: |
+  Ad-hoc polymorphism occurs when a function is defined over several different types acting in a different way for each type. The post defines a pattern of ad-hoc polymorphism implementation with TypeScript and makes its comparison with Scala's implicit technique. 
 ---
 
 # Ad-hoc polymorphism in TypeScript with implicit context.

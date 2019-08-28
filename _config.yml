@@ -1,6 +1,10 @@
-title: i.am.fog.fish
+title: 𝖎⋅𝖆𝖒⋅𝖋𝖔𝖌⋅𝖋𝖎𝖘𝖍
 baseurl: ""
 url: ""
+description: |
+  Personal Web Site to share insides about Functional Programming,
+  Consumer Internet Services, Distributed Systems, Linked Data, 
+  Cloud Services, Security and many other subjects.
 
 theme: just-the-docs
 remote_theme: pmarsceill/just-the-docs
@@ -17,3 +21,6 @@ aux_links:
   "LinkedIn":
     - "https://www.linkedin.com/in/dmkolesnikov/"
 
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap

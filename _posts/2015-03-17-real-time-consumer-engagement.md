@@ -1,6 +1,9 @@
 ---
 layout: post
 title:  Real-time consumer engagement
+description: |
+  The interactive marketing is about collecting consumer behavior into discrete signals often called feature vectors, marketologs calls it consumer DNA that enables delivery of relevant communication; boost conversion rates and ensure personalized experience. Usage of knowledge management systems
+  or graph storages helps us efficiently collecte consumer profiles.
 ---
 
 # Real-time consumer engagement
@@ -11,7 +14,7 @@ The successful implementation of real-time consumer engagement depends on the ab
 
 The collaborative (social) filtering is a popular technique for making recommendations. In collaborative filtering we use the power of community to deduct knowledge about products (it based on segmentation and data clustering techniques). Despite many advantages, the recommendation systems based on collaborative filtering tends to recommend already popular products. As an extreme case, the individual preferences of consumers are degraded. The classification based on consumer attribution bypasses this issue.
 
-The development of a consumer-centric retail offering becomes easy when consumer behavior mapped to discrete signal of called feature vectors, marketologs calls it consumer  DNA. DNA enables delivery of relevant communication; boost conversion rates and ensure personalized experience.
+The development of a consumer-centric retail offering becomes easy when consumer behavior mapped to discrete signal often called feature vectors, marketologs calls it consumer DNA. DNA enables delivery of relevant communication; boost conversion rates and ensure personalized experience.
 
 High-resolution consumer engagement traces consumer behavior while he/she interacts with digital user experience. The state-of-the-art log management solution is used for traditional long-term, off-line analytics. The interactive analytic immediately streams consumer behavior using communication sockets. The atomic knowledge facts about consumer behavior map digital footprints to construct consumer genome. The consumer genome is a collection of attributes to depict consumer behavior using dimension and decay properties in discrete manner. It empowers with incisive insights on various facets of the consumer.
 

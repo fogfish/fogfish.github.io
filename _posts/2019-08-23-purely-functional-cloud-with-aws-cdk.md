@@ -1,6 +1,8 @@
 ---
 layout: post
 title:  Purely Functional Cloud Components with AWS CDK
+description: |
+  A toolkit to develop purely functional and high-order cloud components with AWS CDK. AWS development kit do not implement a pure functional approach. The abstraction of cloud resources is exposed using class hierarchy, each type represents a "cloud component" and encapsulates everything AWS CloudFormation needs to create the component. A shift from category of classes to category of pure functions simplifies the development by scraping boilerplate. A pure function component of is a right approach to express semantic of Infrastructure as a Code.
 ---
 
 # Purely Functional Cloud Components with AWS CDK

@@ -2,6 +2,16 @@
 
 This is the data for [my blog](https://i.am.fog.fish).
 
+## Getting started
+
+See official MacOS installation [instructions](https://jekyllrb.com/docs/installation/macos/)
+
+```bash
+gem install --user-install bundler jekyll
+bundle install
+jekyll serve
+```
+
 ## License
 
 Copyright © 2012 - 2019 Dmitry Kolesnikov, All Right Reserved.

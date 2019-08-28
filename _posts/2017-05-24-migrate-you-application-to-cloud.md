@@ -1,6 +1,9 @@
 ---
 layout: post
 title:  Migrate Your Application To Cloud Age
+description: |
+  Microservices became a design style to define system architectures, purify core business concepts, evolve solutions in parallel, make things look uniform, and implement stable and consistent interfaces across systems. Fashion Search is a promising field to evolve a microservice architecture.
+  The post discusses key concepts about implementation of non-functional requirements while ensure the system evolution for business needs
 ---
 
 # Migrate Your Application To Cloud Age

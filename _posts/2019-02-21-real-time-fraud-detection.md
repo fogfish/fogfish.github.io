@@ -1,6 +1,8 @@
 ---
 layout: post
 title:  Real-time fraud detection
+description: |
+  FinTech is looking for methods for real-time fraud detection. The successful implementation of real-time fraud detection depends on the ability to understand consumer transaction, deduct relevant knowledge and accumulate consumer profile as a set of feature vectors. These vectors formalizes consumer behavior in the format suitable and understandable by machines. The methods of consumer transaction and financial flows aggregation into a collection of immutable facts help to conduct this analysis.  
 ---
 
 # Real-time fraud detection
