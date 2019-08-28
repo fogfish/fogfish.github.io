@@ -3,6 +3,7 @@ layout: default
 title: Languages
 parent: Technology Radar
 nav_order: 4
+description: Links to programming languages and related resources.
 ---
 
 # Languages

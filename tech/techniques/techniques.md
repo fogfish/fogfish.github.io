@@ -3,6 +3,7 @@ layout: default
 title: Techniques
 parent: Technology Radar
 nav_order: 2
+description: Techniques and magical tricks used by software craftsman 
 ---
 
 # Techniques

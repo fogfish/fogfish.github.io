@@ -3,6 +3,7 @@ layout: default
 title: Frameworks
 parent: Technology Radar
 nav_order: 5
+description: Links to frameworks and related resources.
 ---
 
 # Frameworks

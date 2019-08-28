@@ -4,6 +4,7 @@ title: Technology Radar
 permalink: /radar
 nav_order: 2
 has_children: true
+description: Technology Radar maintains a highlights about currently interesting technologies in software development.
 ---
 
 # Technology Radar

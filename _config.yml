@@ -4,7 +4,9 @@ url: ""
 description: |
   Personal Web Site to share insides about Functional Programming,
   Consumer Internet Services, Distributed Systems, Linked Data, 
-  Cloud Services, Security and many other subjects.
+  Cloud Services, Security and many other subjects. It maintains a 
+  highlights about currently interesting technologies in software 
+  development.
 
 theme: just-the-docs
 remote_theme: pmarsceill/just-the-docs

@@ -3,6 +3,7 @@ layout: default
 title: Behavior
 parent: Technology Radar
 nav_order: 1
+description: Software craftsman behavior.
 ---
 
 # Behavior

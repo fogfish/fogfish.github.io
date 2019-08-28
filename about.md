@@ -4,6 +4,7 @@ title: About Me
 permalink: /about
 nav_order: 3
 search_exclude: true
+description: Creative technology leader. Experienced in engineering of consumer oriented cloud services, databases and protocols. Able to direct full product life cycle using agile methods. Has proven skills to execute greenfield development. Strong interests on engineering of decentralized distributed solutions and real-time processing. Hands-on with large system performance and scalability. Open Source enthusiast. 
 ---
 
 # About Me - 𝕯𝖒𝖎𝖙𝖗𝖞
