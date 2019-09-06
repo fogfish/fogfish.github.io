@@ -3,7 +3,8 @@ layout: default
 title: Techniques
 parent: Technology Radar
 nav_order: 2
-description: Techniques and magical tricks used by software craftsman 
+description: |
+  Software development techniques, theories and fundamental aspects of computer science.
 ---
 
 # Techniques

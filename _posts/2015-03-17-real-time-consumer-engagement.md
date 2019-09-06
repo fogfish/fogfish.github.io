@@ -1,9 +1,8 @@
 ---
 layout: post
-title:  Real-time consumer engagement
+title:  Deduct consumer behavior in real-time.
 description: |
-  The interactive marketing is about collecting consumer behavior into discrete signals often called feature vectors, marketologs calls it consumer DNA that enables delivery of relevant communication; boost conversion rates and ensure personalized experience. Usage of knowledge management systems
-  or graph storages helps us efficiently collecte consumer profiles.
+  The interactive marketing is about collecting and deducting consumer behavior in real-time manner using knowledge management and graph systems.
 ---
 
 # Real-time consumer engagement

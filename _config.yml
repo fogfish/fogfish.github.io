@@ -2,11 +2,8 @@ title: 𝖎⋅𝖆𝖒⋅𝖋𝖔𝖌⋅𝖋𝖎𝖘𝖍
 baseurl: ""
 url: "https://i.am.fog.fish"
 description: |
-  Personal Web Site to share insides about Functional Programming,
-  Consumer Internet Services, Distributed Systems, Linked Data, 
-  Cloud Services, Security and many other subjects. It maintains a 
-  highlights about currently interesting technologies in software 
-  development.
+  Personal Web Site maintains a highlights about interesting technologies in
+  software development, distributed systems, cloud computing and security.
 
 theme: just-the-docs
 remote_theme: pmarsceill/just-the-docs
@@ -22,6 +19,16 @@ aux_links:
     - "https://github.com/fogfish"
   "LinkedIn":
     - "https://www.linkedin.com/in/dmkolesnikov/"
+
+twitter:
+  username: _fogfish_
+  card: summary
+
+social:
+  name: fogfish
+  links:
+    - https://twitter.com/_fogfish_
+    - https://github.com/fogfish
 
 plugins:
   - jekyll-seo-tag

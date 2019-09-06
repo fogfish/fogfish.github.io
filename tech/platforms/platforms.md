@@ -3,7 +3,8 @@ layout: default
 title: Platforms
 parent: Technology Radar
 nav_order: 3
-description: Links to software platforms and related resources.
+description: |
+  Software development platforms, they patterns and related resources.
 ---
 
 # Platforms

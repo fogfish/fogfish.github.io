@@ -2,7 +2,7 @@
 layout: post
 title:  Composable Cloud Components with AWS CDK
 description: |
-  The composition is a style of development to build a new things from small reusable elements. AWS CDK makes an opportunity to deliver Infrastructure as a Code. The article discusses various patterns of cloud components composition and emphasis a purely functional method as a solution to scarp a boilerplate code. 
+  Compose AWS CDK Components from small reusable elements using a purely functional method as a solution to scarp a boilerplate code. 
 ---
 
 # Composable Cloud Components with AWS CDK

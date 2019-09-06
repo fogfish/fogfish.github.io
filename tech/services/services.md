@@ -3,7 +3,8 @@ layout: default
 title: Services
 parent: Technology Radar
 nav_order: 6
-description: Links to services useful for software development.
+description: |
+  Services, utilities and tools useful for software development.
 ---
 
 # Services

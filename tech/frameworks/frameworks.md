@@ -1,9 +1,10 @@
 ---
 layout: default
-title: Frameworks
+title: Frameworks and other abstractions
 parent: Technology Radar
 nav_order: 5
-description: Links to frameworks and related resources.
+description: |
+  References to software frameworks and related abstractions.
 ---
 
 # Frameworks

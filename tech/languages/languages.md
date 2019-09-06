@@ -1,12 +1,13 @@
 ---
 layout: default
-title: Languages
+title: Programming Languages
 parent: Technology Radar
 nav_order: 4
-description: Links to programming languages and related resources.
+description: |
+  References to programming languages, development tricks and other useful techniques.
 ---
 
-# Languages
+# Programming Languages
 
 
 ## Functional programming
