@@ -1,3 +1,10 @@
+---
+layout: post
+title:  Development Environment Checklist
+description: |
+  Checklist to setup development environment from scratch.
+---
+
 # Development Environment Checklist
 
 Checklist to setup development environment from scratch 
