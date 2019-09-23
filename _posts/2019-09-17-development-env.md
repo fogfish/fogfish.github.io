@@ -35,6 +35,7 @@ Checklist to setup development environment from scratch
 * [Go](https://golang.org/dl/)
   - `export PATH=/usr/local/go/bin:$PATH`
   - `export GOPATH=$HOME/devel/go`
+* `brew install dep`
 * `brew install openssl`
 * [Erlang](https://www.erlang.org/downloads)
   - `./configure --prefix=/usr/local/otp_22.0 --enable-threads --enable-smp-support --enable-kernel-poll --with-ssl=/usr/local/opt/openssl`
