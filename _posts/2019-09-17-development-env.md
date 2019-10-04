@@ -22,6 +22,7 @@ Checklist to setup development environment from scratch
 * [Burp Suite](https://portswigger.net/burp)
 * `brew install node`
 * `brew install python3`
+* `python3 -m pip install virtualenv`
 * `npm install -g typescript ts-node`
 * `pip3 install awscli --upgrade`
 * `npm install -g aws-cdk`
