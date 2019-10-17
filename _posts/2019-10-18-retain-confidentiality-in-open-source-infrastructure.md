@@ -62,7 +62,7 @@ const secret = config.secretValueFromJson('confidential').toString()
 const zone = dns.HostedZone.fromHostedZoneAttributes(parent, 'HostedZone', {hostedZoneId: secret})
 ```
 
-## `config` is a High Order Component
+## High Order Component: config
 
 Let's shift a focus from category of class hierarchy to category of pure functions. It is based on [purely functional AWS CDK extension](https://github.com/fogfish/aws-cdk-pure). The library `aws-cdk-pure-hoc` implements `config` component to fetch data from AWS Secret manager. The component provides a single function to read `string` values
 
@@ -70,7 +70,10 @@ Let's shift a focus from category of class hierarchy to category of pure functio
 function String(key: string, bucket?: string ): IPure<string>
 ```
 
-If `bucket` is not defined then `AWS_IAAC_CONFIG` environment variable is used. Here is an example 
+If `bucket` is not defined then `AWS_IAAC_CONFIG` environment variable is used.
+
+
+Here is a full example of `config` HoC usage 
 
 ```typescript
 import * as config from 'aws-cdk-pure-hoc/config'
