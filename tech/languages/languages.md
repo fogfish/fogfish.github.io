@@ -49,3 +49,14 @@ description: |
 [TypeScript: Working with JSON](http://choly.ca/post/typescript-json/) - TypeScript do not support at type safeness on external JSON object. The blog gives hints how to enforce type safeness without generics or 3rd party libraries
 
 
+## Go
+
+#### Adopt
+
+[Type embedding in Go](https://travix.io/type-embedding-in-go-ba40dd4264df) - Go does not provide the typical, type-driven notion of subclassing, but it does have the ability to “borrow” pieces of an implementation by embedding types within a struct or interface. In fact, type embedding is product type composition. The article explains basics behind the embedding.
+
+
+
+
+
+
