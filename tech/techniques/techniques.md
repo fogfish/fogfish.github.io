@@ -48,3 +48,10 @@ description: |
 [Alternatives to Placeholder Text](https://uxdesign.cc/alternatives-to-placeholder-text-13f430abc56f) - Improve form usability by addressing the perils of placeholders. 
 
 [4 Rules for Intuitive UX](https://learnui.design/blog/4-rules-intuitive-ux.html) - advice on improving the UX of your designs WITHOUT hours of user research sessions, paper prototyping playtime, or any other trendy UX buzzwords.
+
+
+## Security
+
+#### Assess
+
+[Git Secret Scanner](https://shhgit.darkport.co.uk) - Analysis of GitHub, GitLab and BitBucket reports for accedential security commits.
