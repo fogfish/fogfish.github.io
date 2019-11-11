@@ -11,7 +11,6 @@ description: |
 
 ## Distributed System
 
-### CAP Theorem
 
 #### Assess
 
