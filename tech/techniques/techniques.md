@@ -19,6 +19,8 @@ description: |
 
 [Base: An Acid Alternative](https://queue.acm.org/detail.cfm?id=1394128) - In partitioned databases, trading some consistency for availability can lead to dramatic improvements in scalability. It discusses an applicability of persistent message queues to achieve eventual consistency and recovery from failures.
 
+[Peer-to-Peer Communication Across Network Address Translators](https://bford.info/pub/net/p2pnat/index.html) - Network Address Translation (NAT) causes well-known difficulties for peer-to-peer (P2P) communication, since the peers involved may not be reachable at any globally valid IP address. Several NAT traversal techniques are known, but their documentation is slim, and data about their robustness or relative merits is slimmer. This paper documents and analyzes one of the simplest but most robust and practical NAT traversal techniques, commonly known as “hole punching.”
+
 #### Adopt
 
 [Command Query Responsibility Segregation (CQRS) pattern](https://martinfowler.com/bliki/CQRS.html) - The technique defines an alternative approach to CURD. At its heart is the notion that you can use a different model to update information than the model you use to read information. CQRS patterns simplifies design, scalability and fault-tolerance of write stream especially when it accomplished by Event Sourcing (streaming). It impacts on the reader's consistency which requires special caching techniques if pattern is used in Web application. 
