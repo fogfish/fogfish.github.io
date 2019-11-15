@@ -14,7 +14,7 @@ Going to Open Source does not mean that you have to disclosure private configura
 
 Often, Open Source Infrastructure uses existing cloud resources or config such as Hosted Zone Id, S3 Bucket Names, Internal Domain Names, not mentioned a secret keys. No one benefits if this information is exposed. It would not allow to re-use **high-order** infrastructure component. Its have to be configurable via side-channel. AWS CDK allows to use either stack parameters or environment variables. However, this does not sound as an ultimate solution to retain confidentiality. You advance a problem to next level. Your CI/CD gets a responsibility to parametrize infrastructure deployment with confidential configuration. A circle is closed - how to protect information at CI/CD? CI/CD advertises the usage of encryption methods or key vaults. 
 
-## Key Vault
+## Key Vault (AWS Secret Manager)
 
 It is possible to use [AWS Secret Manager](https://aws.amazon.com/secrets-manager/) directly from infrastructure code and making it to be a central place to keep sensitive configuration. As a side node, the secret manager uses [AWS KMS](https://docs.aws.amazon.com/kms/latest/developerguide/services-secrets-manager.html) inside. 
 
@@ -83,6 +83,52 @@ config.String('confidential', 'MyConfig').flatMap(MyHostedZone)
 
 // use secret
 function MyHostedZone(secret: string) { ... }
+```
+
+## Key Management Service (AWS KMS)
+
+Sometimes, We shall pass secrets to applications or runtime environment. Secrets must not be visible while they are passing through CI/CD, AWS Cloud Formation, etc. [AWS KMS](https://aws.amazon.com/kms/) helps to retain end-to-end encryption. AWS CDK rocks again here, we can simplify a key management process
+
+Let's create our KMS key
+
+```typescript
+import * as iam from '@aws-cdk/aws-iam'
+import * as kms from '@aws-cdk/aws-kms'
+
+const key = new kms.Key(this, 'MyKey')
+key.addAlias('app/key')
+
+// Allow any one in the account to use a key if valid IAM role exists
+key.grantDecrypt(new iam.AccountPrincipal(cdk.Aws.ACCOUNT_ID))
+
+// Give AWS User permissions to use the key
+key.grantEncryptDecrypt(
+  new iam.ArnPrincipal(`arn:aws:iam::${cdk.Aws.ACCOUNT_ID}:user/${username}`)
+)
+```
+
+Encrypt/Decrypt your secrets with [aws command line](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html) utility.
+
+```bash
+export KEY=alias/app/key
+
+aws kms encrypt \
+  --key-id $KEY \
+  --plaintext "PlainText" \
+  --query CiphertextBlob \
+  --output text
+
+aws kms decrypt \
+  --ciphertext-blob fileb://<(echo "CryptoText" | base64 --decode) \
+  --query Plaintext \
+  --output text | base64 --decode
+```
+
+Finally, you need to grant permission to other IAM roles to utilise the key
+
+```typescript
+const key = kms.Key.fromKeyArn(this, 'KMS', 'arn:...')
+key.grantDecrypt(/* iam.IRole */)
 ```
 
 ## Afterwords
