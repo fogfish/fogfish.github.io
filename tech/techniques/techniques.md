@@ -11,13 +11,14 @@ description: |
 
 ## Distributed System
 
-### CAP Theorem
 
 #### Assess
 
 [CAP Twelve Years Later: How the "Rules" Have Changed](https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed) - The CAP theorem asserts that any net­worked shared-data system can have only two of three desirable properties. Aspects of the CAP theorem are often misunderstood, particularly the scope of availability and consistency, which can lead to undesirable results. Articles discusses these misleading aspects.
 
 [Base: An Acid Alternative](https://queue.acm.org/detail.cfm?id=1394128) - In partitioned databases, trading some consistency for availability can lead to dramatic improvements in scalability. It discusses an applicability of persistent message queues to achieve eventual consistency and recovery from failures.
+
+[Peer-to-Peer Communication Across Network Address Translators](https://bford.info/pub/net/p2pnat/index.html) - Network Address Translation (NAT) causes well-known difficulties for peer-to-peer (P2P) communication, since the peers involved may not be reachable at any globally valid IP address. Several NAT traversal techniques are known, but their documentation is slim, and data about their robustness or relative merits is slimmer. This paper documents and analyzes one of the simplest but most robust and practical NAT traversal techniques, commonly known as “hole punching.”
 
 #### Adopt
 
@@ -48,3 +49,10 @@ description: |
 [Alternatives to Placeholder Text](https://uxdesign.cc/alternatives-to-placeholder-text-13f430abc56f) - Improve form usability by addressing the perils of placeholders. 
 
 [4 Rules for Intuitive UX](https://learnui.design/blog/4-rules-intuitive-ux.html) - advice on improving the UX of your designs WITHOUT hours of user research sessions, paper prototyping playtime, or any other trendy UX buzzwords.
+
+
+## Security
+
+#### Assess
+
+[Git Secret Scanner](https://shhgit.darkport.co.uk) - Analysis of GitHub, GitLab and BitBucket reports for accedential security commits.
