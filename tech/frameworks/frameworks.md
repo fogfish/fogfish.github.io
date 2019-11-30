@@ -19,6 +19,9 @@ description: |
 
 [BlueprintJs](https://blueprintjs.com/docs/#blueprint) - Blueprint is a React-based UI toolkit for the web.
 
+[ESLint and Prettier for React](https://thomlom.dev/setup-eslint-prettier-react/) - Building high-quality apps is hard for many reasons. A linter analyses statically your code. It means it checks out the code without executing it. 
+
+
 #### Hold
 
 [The Dress Code](https://github.com/zalando/dress-code) - The Dress Code is a style library / style guide which is designed for maintainability and modularity. The library has an react extension [react-dress-code](https://github.com/fogfish/react-dress-code). 
