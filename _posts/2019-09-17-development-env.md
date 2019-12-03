@@ -44,4 +44,5 @@ Checklist to setup development environment from scratch
   - `curl -s "https://get.sdkman.io" | bash` use [sdkman](https://sdkman.io/install)
   - `sdk install java 11.0.5.hs-adpt`
   - `brew install sbt`
+  - Visual Studio Code plugins: Scala (Metals)
 
