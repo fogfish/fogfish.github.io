@@ -40,4 +40,8 @@ Checklist to setup development environment from scratch
 * `brew install openssl`
 * [Erlang](https://www.erlang.org/downloads)
   - `./configure --prefix=/usr/local/otp_22.0 --enable-threads --enable-smp-support --enable-kernel-poll --with-ssl=/usr/local/opt/openssl`
+* [Scala](https://www.scala-lang.org)
+  - `curl -s "https://get.sdkman.io" | bash` use [sdkman](https://sdkman.io/install)
+  - `sdk install java 11.0.5.hs-adpt`
+  - `brew install sbt`
 
