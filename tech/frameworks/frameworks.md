@@ -19,6 +19,8 @@ description: |
 
 [BlueprintJs](https://blueprintjs.com/docs/#blueprint) - Blueprint is a React-based UI toolkit for the web.
 
+[Flexbox Online Console](http://flexbox.buildwithreact.com) - Use FlexBox to layout with CSS.
+
 [ESLint and Prettier for React](https://thomlom.dev/setup-eslint-prettier-react/) - Building high-quality apps is hard for many reasons. A linter analyses statically your code. It means it checks out the code without executing it. 
 
 
