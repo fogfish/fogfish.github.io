@@ -19,7 +19,7 @@ Checklist to setup development environment from scratch
 * [Brew](https://brew.sh)
 * [Visual Studio Code](https://code.visualstudio.com)
   - Code Spell Checker
-  - Monokai theme
+  - [Monokai Operator](https://marketplace.visualstudio.com/items?itemName=markfknight.monokai-operator-theme) / [Identical Sublime Monokai](https://marketplace.visualstudio.com/items?itemName=maximetinu.identical-sublime-monokai-csharp-theme-colorizer)
   - Docker
   - Erlang
   - Go
