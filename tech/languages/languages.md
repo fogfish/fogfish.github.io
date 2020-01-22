@@ -60,5 +60,12 @@ description: |
 
 [Why doesn't Go have variance in its type system?](https://blog.merovius.de/2018/06/03/why-doesnt-go-have-variance-in.html) - It explain what co-, contra- and invariance are and what the implications for Go's type system would be. In particular, why it's impossible to have variance in slices.
 
+[Go AST Viewer](http://goast.yuroyoro.net) - online tool for analysis and visualization of ast
+
+[Basic AST Manipulation](https://zupzup.org/ast-manipulation-go/), [Basic AST Traversal in Go](https://zupzup.org/go-ast-traversal/) - simple technique to modify Go code using AST.
+
+
+
+
 
 
