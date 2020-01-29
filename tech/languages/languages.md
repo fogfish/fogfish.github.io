@@ -51,10 +51,15 @@ description: |
 
 ## Go
 
+#### Assess
+
+[Go AST Viewer](http://goast.yuroyoro.net) - online tool for analysis and visualization of ast
+
+[Basic AST Manipulation](https://zupzup.org/ast-manipulation-go/), [Basic AST Traversal in Go](https://zupzup.org/go-ast-traversal/) - simple technique to modify Go code using AST.
+
 #### Adopt
 
 [Type embedding in Go](https://travix.io/type-embedding-in-go-ba40dd4264df) - Go does not provide the typical, type-driven notion of subclassing, but it does have the ability to “borrow” pieces of an implementation by embedding types within a struct or interface. In fact, type embedding is product type composition. The article explains basics behind the embedding.
-
 
 [Errors are values](https://blog.golang.org/errors-are-values) - Error handling in Go is different than other functional programming. Usually Either monad helps a lot. Go programmers miss a fundamental point about errors: Errors are values. The article shows a few patterns on error handling with Go. 
 
@@ -62,9 +67,7 @@ description: |
 
 [Go and Sum Data Types](https://eli.thegreenplace.net/2018/go-and-algebraic-data-types/) - Sum types is a neat feature of some programming languages that lets us specify that a value might take one of several related types, and includes convenient syntax for pattern matching on these types at run-time.
 
-[Go AST Viewer](http://goast.yuroyoro.net) - online tool for analysis and visualization of ast
-
-[Basic AST Manipulation](https://zupzup.org/ast-manipulation-go/), [Basic AST Traversal in Go](https://zupzup.org/go-ast-traversal/) - simple technique to modify Go code using AST.
+[Functional options on steroids](https://sagikazarmark.hu/blog/functional-options-on-steroids/) - Functional options is a paradigm in Go for clean and extensible APIs popularized by Dave Cheney and Rob Pike. This post is about the practices that appeared around the pattern since it was first introduced.
 
 
 
