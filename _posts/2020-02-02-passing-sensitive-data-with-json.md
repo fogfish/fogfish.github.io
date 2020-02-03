@@ -155,3 +155,6 @@ Software engineers are responsible to retain confidentiality of sensitive data i
 You can benefit from this library. It implements semi-auto cipher codec of textual content and custom Algebraic Data Types. Encryption/Decryption process is transparent for developers. It is embedded into `json.Marshal` and `json.Unmarshal` routines so that protection of sensitive data happens during the process of data serialization.
 
 See the complete example [here](https://github.com/fogfish/golem/blob/master/crypto/example/main.go).
+
+Feel free to share your comments and thought on [Twitter](https://twitter.com/_fogfish_/status/1224405067022905344) or raise and issue to [GitHub](https://github.com/fogfish/golem).
+
