@@ -23,7 +23,7 @@ AWS KMS provides [SDK](https://docs.aws.amazon.com/sdk-for-go/api/service/kms/) 
 
 ## Encryption of structured data
 
-Here we are continue discussion about the [developer friendly solution](https://github.com/fogfish/golem/tree/master/crypto) to apply Application/Record Level Encryption with help of KMS for sensitive structured data (e.g. JSON). The design aims to address few requirements:
+Here we are continue discussion about the [developer friendly solution](https://github.com/fogfish/cryptex) to apply Application/Record Level Encryption with help of KMS for sensitive structured data (e.g. JSON). The design aims to address few requirements:
 
 * transparent for developers - encryption/decryption is built with semi-auto codec. It makes a "magic" of switching representation between crypto/plain texts. Developer just declares the intent to protect sensitive data. 
 
@@ -42,11 +42,11 @@ Golang has excellent [built-in abstraction](https://blog.golang.org/json-and-go)
 MyADT{Secret: "plaintext"} ⟷ {"secret":"cGxhaW50ZXh0"}
 ```
 
-Semi-automatic encryption can be achieved either using [struct tags](https://medium.com/golangspec/tags-in-golang-3e5db0b8ef3e) or custom types. Struct tags is a feature to annotate algebraic data types but it requires usage of reflection, which do not provide compile type safeness. [The library](https://github.com/fogfish/golem/tree/master/crypto) implements final type to encrypt/decrypt strings `crypto.String` and generic type `crypto.AnyT`, which allows to handle any application specific algebraic data types.
+Semi-automatic encryption can be achieved either using [struct tags](https://medium.com/golangspec/tags-in-golang-3e5db0b8ef3e) or custom types. Struct tags is a feature to annotate algebraic data types but it requires usage of reflection, which do not provide compile type safeness. [The library](https://github.com/fogfish/cryptex) implements final type to encrypt/decrypt strings `cryptex.String` and generic type `cryptex.AnyT`, which allows to handle any application specific algebraic data types.
 
 ### Strings encryption
 
-Use [`crypto.String`](https://github.com/fogfish/golem/blob/master/crypto/string.go) to deal with sensitive textual content. Its implementation assumes that binary crypto text is encoded with base64, which makes is usable with any text-based protocols. Crypto binary data is produced either by [AWS KMS SDK](https://docs.aws.amazon.com/sdk-for-go/api/service/kms/) or AWS command line utility. The following code sketches usage of KMS to protect sensitive data. Note: error handling is skipped just to illustrate usage of api  
+Use [`cryptex.String`](https://github.com/fogfish/cryptex/blob/master/string.go) to deal with sensitive textual content. Its implementation assumes that binary crypto text is encoded with base64, which makes is usable with any text-based protocols. Crypto binary data is produced either by [AWS KMS SDK](https://docs.aws.amazon.com/sdk-for-go/api/service/kms/) or AWS command line utility. The following code sketches usage of KMS to protect sensitive data. Note: error handling is skipped just to illustrate usage of api  
 
 ```golang
 //  from example
@@ -67,12 +67,12 @@ func Encrypt(plaintext []byte) cryptotext string {
 }
 ```
 
-The usage of `crypto.String` data type in your application is straight forward:
+The usage of `cryptex.String` data type in your application is straight forward:
 
 ```go
 import (
-	"github.com/fogfish/golem/crypto"
-	"github.com/fogfish/golem/crypto/cipher"
+	"github.com/fogfish/cryptex"
+	"github.com/fogfish/cryptex/cipher"
 )
 
 // You have to define either KMS key id or its alias if your application needs to
@@ -83,10 +83,10 @@ cipher.Default.UseKey("alias/mykms/key")
 // leaves boundaries of your application (e.g. sent to client, stored to disk, etc).
 // Use `crypto.String` instead.
 type User struct {
-  Password crypto.String `json:"password"`
+  Password cryptex.String `json:"password"`
 }
 
-// The type of `crypto.String` is used as usual to keep your plain text data in memory.
+// The type of `cryptex.String` is used as usual to keep your plain text data in memory.
 // A sensitive value is not assignable to variable of type `string`. You have to either 
 // use helper method `PlainText` e.g. `user.Password.PlainText()` or cast it to string.
 // A simple protection against accidental leakage.
@@ -102,12 +102,12 @@ err := json.Unmarshal(bytes, &user)
 
 ### Algebraic Data Types encryption
 
-You might experience encryption overhead if multiple fields with sensitive textual data are involved. It becomes more efficient to use product data type as a container of sensitive data. Use [golem generic](https://github.com/fogfish/golem/tree/master/generic) to parametrize [`crypto.AnyT`](https://github.com/fogfish/golem/blob/master/crypto/crypto.go) with your data type. `crypto.AnyT` converts Algebraic Data Types to JSON then encrypts and applies base64 transformation. Use `go generate` to parametrize generic algorithm with you data type. Here is a minimal example 
+You might experience encryption overhead if multiple fields with sensitive textual data are involved. It becomes more efficient to use product data type as a container of sensitive data. Use [golem generic](https://github.com/fogfish/golem/tree/master/generic) to parametrize [`cryptex.AnyT`](https://github.com/fogfish/cryptex/blob/master/cryptex.go) with your data type. `cryptex.AnyT` converts Algebraic Data Types to JSON then encrypts and applies base64 transformation. Use `go generate` to parametrize generic algorithm with you data type. Here is a minimal example 
 
 ```go
 // Just create a package for your ADT. Add the following line to comments.
 // It instructs code generator to parametrize generic algorithm with you data type.
-//go:generate golem -T Identity -generic github.com/fogfish/golem/crypto/crypto.go
+//go:generate golem -T Identity -generic github.com/fogfish/cryptex/cryptex.go
 package identity
 
 // Declare a type as standard golang struct.
@@ -118,23 +118,23 @@ type Identity struct {
 }
 ```
 
-As the result, you'll get new data type `identity.Crypto`. It knows how to encrypt/decrypt your ADT. Its usage is straight forward:
+As the result, you'll get new data type `identity.Cryptex`. It knows how to encrypt/decrypt your ADT. Its usage is straight forward:
 
 ```go
 import (
   ".../identity"
 )
 
-// Do not use plain text type. Use `identity.Crypto` it ensures protection of
+// Do not use plain text type. Use `identity.Cryptex` it ensures protection of
 // sensitive data when it leaves boundaries of your application.
 type User struct {
-  Identity identity.Crypto `json:"identity"`
+  Identity identity.Cryptex `json:"identity"`
 }
 
-// `identity.Crypto` is an alias to `identity.Identity` type. Instantiate it with
+// `identity.Cryptex` is an alias to `identity.Identity` type. Instantiate it with
 // same interface as original one.
 user := User{
-  Identity: identity.Crypto{
+  Identity: identity.Cryptex{
     Email:    "any@example.com",
     Password: "sensitive data",
     PinCode:  1234,
@@ -154,7 +154,7 @@ Software engineers are responsible to retain confidentiality of sensitive data i
 
 You can benefit from this library. It implements semi-auto cipher codec of textual content and custom Algebraic Data Types. Encryption/Decryption process is transparent for developers. It is embedded into `json.Marshal` and `json.Unmarshal` routines so that protection of sensitive data happens during the process of data serialization.
 
-See the complete example [here](https://github.com/fogfish/golem/blob/master/crypto/example/main.go).
+See the complete example [here](https://github.com/fogfish/cryptex/blob/master/example/main.go).
 
-Feel free to share your comments and thought on [Twitter](https://twitter.com/_fogfish_/status/1224405067022905344) or raise and issue to [GitHub](https://github.com/fogfish/golem).
+Feel free to share your comments and thought on [Twitter](https://twitter.com/_fogfish_/status/1224405067022905344) or raise and issue to [GitHub](https://github.com/fogfish/cryptex).
 
