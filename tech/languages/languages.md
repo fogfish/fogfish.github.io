@@ -69,7 +69,7 @@ description: |
 
 [Functional options on steroids](https://sagikazarmark.hu/blog/functional-options-on-steroids/) - Functional options is a paradigm in Go for clean and extensible APIs popularized by Dave Cheney and Rob Pike. This post is about the practices that appeared around the pattern since it was first introduced.
 
-
+[JSON and struct composition in Go](https://attilaolah.eu/2014/09/10/json-and-struct-composition-in-go/) - Say you are decoding a JSON object into a Go struct. It comes from a service that is not under your control, so you cannot do much about the schema. However, you want to encode it differently.
 
 
 
