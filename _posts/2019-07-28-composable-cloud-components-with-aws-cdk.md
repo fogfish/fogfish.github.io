@@ -15,7 +15,7 @@ The *composition* is a style of development to build a new things from small reu
 
 This is because functions describe the solution to your problem. If your code contains many lines then highly likely you are solving few problems without articulating them. A critical thinking is the process of software development. 
 
-A recent release of [AWS CDK](https://github.com/aws/aws-cdk) not only made an opportunity to deliver Infrastructure as a true Code but also gave a capability to make it from decomposable elements. Unfortunately, the development kit ignores a pure functional approach. The abstraction of cloud resources is exposed using class hierarchy.
+A recent release of [AWS CDK](https://github.com/aws/aws-cdk) not only made an opportunity to deliver Infrastructure as a true Code but also gave a capability to make it from composable components. Unfortunately, the development kit ignores a pure functional approach. The abstraction of cloud resources is exposed using class hierarchy.
 
 ```typescript
 import * as cdk from '@aws-cdk/core'
@@ -35,12 +35,12 @@ app.synth()
 You are going to produce terrible code if you put entire stack definition to construction. No one will be able to understand at a glance what is going on there.
 
 
-## Compose with cdk.Construct
+## Compose Components with cdk.Construct
 
 > Constructs are the basic building blocks of AWS CDK apps. A construct represents a "cloud component" and encapsulates everything AWS CloudFormation needs to create the component.
 > -- [AWS CDK](https://docs.aws.amazon.com/cdk/latest/guide/constructs.html)
 
-Use this class to define code blocks that solves a single problem - just create a single cloud resource.
+Use this class to define code blocks that solves a single problem - just create a single cloud component.
 
 ```typescript
 import * as cdk from '@aws-cdk/core'
@@ -64,7 +64,7 @@ new MyStack(app, 'MyStack')
 app.synth()
 ```
 
-You'll be able to build reusable cloud component library and automate infrastructure patterns with real code. The usage of `cdk.Construct` only suffers from boilerplate code. 
+You'll be able to build reusable cloud components library and automate infrastructure patterns with real code. The usage of `cdk.Construct` only suffers from boilerplate code. 
 
 ## Pure functions
 
