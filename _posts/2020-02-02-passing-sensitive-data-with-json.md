@@ -2,7 +2,7 @@
 layout: post
 title: Passing Sensitive Data with JSON
 description: |
-  Software engineers are responsible to retain confidentiality of sensitive data in they applications. We implement semi-auto crypto codec of textual content and custom Algebraic Data Types.
+  Software engineers are responsible to retain confidentiality of sensitive data. The post shows usage of auto crypto codec with Algebraic Data Types.
 ---
 
 
