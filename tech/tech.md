@@ -27,3 +27,7 @@ Here is my personal technology radar. It helps me to follow up and assess upcomi
    <dt>HOLD</dt>
    <dd>Proceed with caution.</dd>
 </dl>
+
+{% raw %}
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=800 height=1024 src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSvdh--fSWR6WauFytK1YF-E1eo84pdrW0lmDSFj3mAF9G49-oTgTG6uA-4MVqwxO_ufbpEuh3ncib3/pubhtml"></iframe>
+{% endraw %}
