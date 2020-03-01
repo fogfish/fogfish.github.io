@@ -116,7 +116,7 @@ function show<T>(x: T): string {
 // Property 'constructor' does not exist on type 'T'.
 ```
 
-Usage of overloads solves a problem of type safeness but we are loosing a flexible code decoupling. All supported types have to be declared in single module. It is impossible to offload a functionality outside of each specific type definition, implement it in different modules or libraries. 
+Usage of overloads solves a problem of type safeness but we are losing a flexible code decoupling. All supported types have to be declared in single module. It is impossible to offload a functionality outside of each specific type definition, implement it in different modules or libraries. 
 
 ```typescript
 function show(x: number): string;

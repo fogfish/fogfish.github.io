@@ -97,7 +97,7 @@ The development of stateful microservices requires a data driven design. You nee
 
 Do not expect 100% data consistency within your swarm because of CAP theorem. Use asynchronous and event-based techniques for data distribution. Strong Eventual Consistency is a good target.
 
-As an example, we have used consumer journey as an input to identify our search data boundaries. We derived them from our use-cases and business criterias.
+As an example, we have used consumer journey as an input to identify our search data boundaries. We derived them from our use-cases and business criteria.
 
 The **intake layer** is a traditional layer to ​[extract, transform, and load processes](https://en.wikipedia.org/wiki/Extract,_transform,_load) ​– we call it an event-driven content integration pipe. It is used to ​extract content from a heterogeneous source using both synchronous and asynchronous communication patterns. Usually, it reads content either from ground truth business sources hosted by the e-commerce platform or content extensions driven by a consumer facing application. The content ​transformation stage is a series of purely functional operations that join data from multiple sources and prepare the smallest unit of atomicity required by search use cases. The content is asynchronously loaded​ to microservices at the storage layer, enabling article discovery.
 
