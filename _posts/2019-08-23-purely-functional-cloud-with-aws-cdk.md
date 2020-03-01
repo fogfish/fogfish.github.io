@@ -131,7 +131,7 @@ const lambda = iaac(Function)
 lambda(MyFunction)
 ```
 
-A shift from category of classes to category of pure functions simplifies the development by **scraping boilerplate**. The spec of `iaac` operator is
+A shift from category of classes to category of pure functions simplifies the development by scraping boilerplate. The spec of `iaac` operator is
 
 ```typescript
 type Node<Prop, Type> = new (scope: Construct, id: string, props: Prop) => Type
@@ -224,7 +224,7 @@ function use<T extends Pairs<T>>(resources: Product<T>): Effect<T>
 
 ## Afterwords
 
-The discussed notations complements AWS CDK with the *purely functional composition*. This style of development builds a new things from small reusable "cloud components". A shift from category of classes to category of pure functions simplifies the development by **scraping boilerplate**.
+The discussed notations complements AWS CDK with the *purely functional composition*. This style of development builds a new things from small reusable "cloud components". A shift from category of classes to category of pure functions simplifies the development by scraping boilerplate.
 
 The features discussed here are implemented at [aws-cdk-pure library](https://github.com/fogfish/aws-cdk-pure).  
 
