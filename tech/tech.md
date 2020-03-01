@@ -28,7 +28,9 @@ Here is my personal technology radar. It helps me to follow up and assess upcomi
    <dd>Proceed with caution.</dd>
 </dl>
 
+<!--
 <div>
    <iframe frameborder="no" width="100%" height="1024" src="https://radar.thoughtworks.com/?sheetId=https%3A%2F%2Fdocs.google.com%2Fspreadsheets%2Fd%2F1CfPj-UsFzfayELgTSMDK7YXBqOFCDlEGndsaIy91Ack%2Fedit%3Fusp%3Dsharing">
    </iframe>
 </div>
+-->
