@@ -1,13 +1,13 @@
 ---
 layout: default
-title: Services
+title: Technology
 parent: Technology Radar
 nav_order: 6
 description: |
   Services, utilities and tools useful for software development.
 ---
 
-# Services
+# Technology
 
 ## CI/CD
 
@@ -19,13 +19,3 @@ description: |
 
 [node-lambda](https://github.com/motdotla/node-lambda) - Command line tool to locally run and deploy your node.js application to [AWS Lambda](http://aws.amazon.com/lambda/). Outdated due to AWS CDK.
 
-
-## Jekyll
-
-#### Adopt
-
-[Jekyll](https://jekyllrb.com) - Simple solution for development of statis websites and blogs using markdown. Supported by GitHub out-of-the-box.
-
-[How to setup SEO for a Jekyll static site](https://cloudsh.com/jekyll/seo_for_a_jekyll_static_site.html) - Step-by-step Jekyll configuration of SEO plugin
-
-[10 Must do Jekyll SEO optimizations](https://blog.webjeda.com/optimize-jekyll-seo/) - Explains about SEO optimizations with Jekyll blogs

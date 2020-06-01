@@ -1,13 +1,13 @@
 ---
 layout: default
-title: Behavior and soft skills
-parent: Technology Radar
+title: Soft skills
+parent: Techniques
 nav_order: 1
 description: |
   Aspects of software craftsman's behavior, leadership and other soft skills
 ---
 
-# Behavior and Soft Skills
+# Soft Skills
 
 ## OKR
 

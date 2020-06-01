@@ -1,15 +1,13 @@
 ---
 layout: default
-title: Frameworks and other abstractions
-parent: Technology Radar
-nav_order: 5
+title: React
+parent: Languages
+nav_order: 4
 description: |
-  References to software frameworks and related abstractions.
+  React
 ---
 
-# Frameworks
-
-## React
+# React
 
 #### Adopt
 
@@ -27,15 +25,3 @@ description: |
 #### Hold
 
 [The Dress Code](https://github.com/zalando/dress-code) - The Dress Code is a style library / style guide which is designed for maintainability and modularity. The library has an react extension [react-dress-code](https://github.com/fogfish/react-dress-code). 
-
-
-## Robotic OS
-
-#### Adopt
-
-[LiDAR processing pipeline](https://rapidlasso.com/2018/07/19/complete-lidar-processing-pipeline-from-raw-flightlines-to-final-products/) - rapidlasso is a creator of LAS suite. This tutorial serves as an example for a complete end-to-end workflow that starts with raw LiDAR flightlines to final classified LiDAR tiles and derived products such as raster, vectors, etc.
-
-#### Hold
-
-[A Gentle Introduction to ROS](https://www.cse.sc.edu/~jokane/agitr/) - ROS (Robot Operating System) is rapidly becoming a de facto standard for writing interoperable and reusable robot software. This book supplements ROS's own documentation, explaining how to interact with existing ROS systems and how to create new ROS programs using C++, with special attention to common mistakes and misunderstandings. The intended audience includes new and potential ROS users. 
-
