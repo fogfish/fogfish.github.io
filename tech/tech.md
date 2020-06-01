@@ -13,6 +13,8 @@ description: Technology Radar maintains a highlights about currently interesting
 
 Here is my personal technology radar. It helps me to follow up and assess upcoming technologies, to innovate on them and study news things. Despite a fact that the radar is written using *impersonal* language, it provides value via visibility of used technologies and gained experience curve at my professional life cycle.
 
+[View Technology Radar](https://radar.thoughtworks.com/?sheetId=https%3A%2F%2Fdocs.google.com%2Fspreadsheets%2Fd%2F1CfPj-UsFzfayELgTSMDK7YXBqOFCDlEGndsaIy91Ack%2Fedit%3Fusp%3Dsharing){: .btn .btn-blue .fs-5 .mb-4 .mb-md-0 .mr-2 }
+
 <dl>
    <dt>ADOPT</dt>
    <dd>I do have strong confidence for that and use it when appropriate in my projects.</dd>
@@ -27,4 +29,3 @@ Here is my personal technology radar. It helps me to follow up and assess upcomi
    <dd>Proceed with caution. The technology do not have significant impact.</dd>
 </dl>
 
-[Open Technology Radar]({{ site.baseurl }}{% link https://radar.thoughtworks.com/?sheetId=https%3A%2F%2Fdocs.google.com%2Fspreadsheets%2Fd%2F1CfPj-UsFzfayELgTSMDK7YXBqOFCDlEGndsaIy91Ack%2Fedit%3Fusp%3Dsharing %}){: .btn .fs-5 .mb-4 .mb-md-0 .mr-2 }
