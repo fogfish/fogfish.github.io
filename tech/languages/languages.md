@@ -71,6 +71,9 @@ description: |
 
 [JSON and struct composition in Go](https://attilaolah.eu/2014/09/10/json-and-struct-composition-in-go/) - Say you are decoding a JSON object into a Go struct. It comes from a service that is not under your control, so you cannot do much about the schema. However, you want to encode it differently.
 
+[Standard Package Layout](https://medium.com/@benbjohnson/standard-package-layout-7cdbc8391fc1) - These are seen as big issues in the Go community but there’s another issue that’s rarely mentioned — application package layout.
+
+[Go best practices, six years in](https://peter.bourgon.org/go-best-practices-2016/) - Hints and practices to manage Golang project  
 
 
 
