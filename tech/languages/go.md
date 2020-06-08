@@ -31,5 +31,7 @@ description: |
 
 [Standard Package Layout](https://medium.com/@benbjohnson/standard-package-layout-7cdbc8391fc1) - These are seen as big issues in the Go community but there’s another issue that’s rarely mentioned — application package layout.
 
-[Go best practices, six years in](https://peter.bourgon.org/go-best-practices-2016/) - Hints and practices to manage Golang project  
+[Go best practices, six years in](https://peter.bourgon.org/go-best-practices-2016/) - Hints and practices to manage Golang project.
+
+[Don’t use Go’s default HTTP client](https://medium.com/@nate510/don-t-use-go-s-default-http-client-4804cb19f779) - Go’s http package doesn’t specify request timeouts by default, allowing services to hijack your goroutines. Always specify a custom http.Client when connecting to outside services.
 
