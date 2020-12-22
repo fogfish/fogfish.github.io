@@ -1,5 +1,6 @@
 # i.am.fog.fish 
 
+
 This is the data for [my blog](https://i.am.fog.fish).
 
 ## Getting started
