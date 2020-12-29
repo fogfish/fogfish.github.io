@@ -2,6 +2,7 @@
 layout: default
 title: Soft skills
 parent: Techniques
+grand_parent: Technology Radar
 nav_order: 1
 description: |
   Aspects of software craftsman's behavior, leadership and other soft skills

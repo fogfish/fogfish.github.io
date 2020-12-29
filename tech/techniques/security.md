@@ -2,6 +2,7 @@
 layout: default
 title: Security and Privacy
 parent: Techniques
+grand_parent: Technology Radar
 nav_order: 3
 description: |
   The continued adoption of SaaS as operating model has made security and privacy a must-have techniques during the development.

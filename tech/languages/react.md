@@ -2,6 +2,7 @@
 layout: default
 title: React
 parent: Languages
+grand_parent: Technology Radar
 nav_order: 4
 description: |
   React

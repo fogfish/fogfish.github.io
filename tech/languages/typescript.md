@@ -2,6 +2,7 @@
 layout: default
 title: TypeScript
 parent: Languages
+grand_parent: Technology Radar
 nav_order: 2
 description: |
   TypeScript
