@@ -3,24 +3,12 @@ layout: default
 title: Platforms
 parent: Technology Radar
 nav_order: 3
+has_children: true
 description: |
   Software development platforms, they patterns and related resources.
 ---
 
 # Platforms
-
-## AWS
-
-### AWS CloudFront
-
-#### Assess
-
-[A/B Testing with Lambda@Edge](https://medium.com/buildit/a-b-testing-on-aws-cloudfront-with-lambda-edge-a22dd82e9d12) - Imagine you have a static website or a Single Page Application served through the CDN. You want to experiment two versions with actual users. 
-
-#### Adopt
-
-[A Green/Blue deployment to AWS](https://serverfault.com/questions/714742/blue-green-deployments-with-cloudfront) - CloudFront requires the CNAME in the distribution config to be unique across your entire account. So controlling blue/green via DNS to different distributions will not work. There is a hack rolling around that would use wild cards but that makes no guarantee that the correct files are served. Controlling blue/green via DNS and CloudFront is not feasible.
-
 
 ## Elastic
 
