@@ -28,3 +28,10 @@ description: |
 [Understanding Amazon Cognito user pool OAuth 2.0 grants](https://aws.amazon.com/blogs/mobile/understanding-amazon-cognito-user-pool-oauth-2-0-grants/) AWS Cognito is simplest replacement of OAuth2 Authorization Server, which is configurable using IaC principles. In addition to using the Amazon Cognito-specific user APIs to authenticate users, Amazon Cognito user pools also support the OAuth 2.0 authorization framework for authenticating users. The article explains supported flows and Cognito nuances on using them.
 
 [Server to Server Auth with Amazon Cognito](https://lobster1234.github.io/2018/05/31/server-to-server-auth-with-amazon-cognito/) Step-by-Step guide Client Credentials Grant OAuth2 flow implementation with AWS Cognito
+
+
+## KMS
+
+#### Adopt
+
+[AWS Key Management Service Best Practices](https://d0.awsstatic.com/whitepapers/aws-kms-best-practices.pdf) tells about designing maintainable solution with AWS KMS. Highlights design pattern about keys access controls, aliases and using the service at scale.  

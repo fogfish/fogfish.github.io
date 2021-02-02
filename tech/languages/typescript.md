@@ -19,3 +19,7 @@ description: |
 [Notes on TypeScript](https://dev.to/busypeoples/notes-on-typescript-pick-exclude-and-higher-order-components-40cp) - a series of posts about TypeScript development techniques. 
 
 [TypeScript: Working with JSON](http://choly.ca/post/typescript-json/) - TypeScript do not support at type safeness on external JSON object. The blog gives hints how to enforce type safeness without generics or 3rd party libraries
+
+#### Trail
+
+[State of JS in 2020](https://2020.stateofjs.com/en-US/) JavaScript as a whole still managed to somehow move forward. As the language itself keeps improving thanks to new features like Optional Chaining and Nullish Coalescing, TypeScript's widespread adoption is taking things to a whole other level by popularizing static typing. The site is a JS "technology radar".
