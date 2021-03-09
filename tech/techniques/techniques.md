@@ -11,6 +11,12 @@ description: |
 
 # Techniques
 
+## Architecture
+
+#### Adopt
+
+[Architectural Decision Records](https://adr.github.io) and [Y-statements](https://medium.com/olzzio/y-statements-10eb07b5a177) captures a single software design choice (Architecture Decision) that addresses a functional or non-functional requirement that is architecturally significant.
+
 ## Machine Learning
 
 #### Assess

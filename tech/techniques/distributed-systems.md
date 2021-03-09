@@ -29,3 +29,5 @@ description: |
 [Robust and Efficient Data Management for a Distributed Hash Table](https://pdfs.semanticscholar.org/6862/d2099203e4dcd4627ca2128115b4bd3d2fdb.pdf) - design and implementation of the distributed hash table based on erasure encoding. This design is both more robust and more efficient than the previous replication-based implementation.
 
 [Kadmelia: A Peer-to-Peer Information System Based on the XOR metric](https://pdos.csail.mit.edu/~petar/papers/maymounkov-kademlia-lncs.pdf) - peer-to-peer DHT with consistency, fault tolerance. Uses XOR-based metric topology.  
+
+[Don’t Build a Distributed Monolith](https://www.microservices.com/talks/dont-build-a-distributed-monolith/) tech talk about the system design principles using microservice pattern. 
