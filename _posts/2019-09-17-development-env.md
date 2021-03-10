@@ -28,11 +28,12 @@ Checklist to setup development environment from scratch
 * [Wireshark](https://www.wireshark.org/download.html)
 * [Burp Suite](https://portswigger.net/burp)
 * `brew install node`
+* `npm install -g yarn`
+* `npm install -g typescript ts-node`
+* `npm install -g aws-cdk`
 * `brew install python3`
 * `python3 -m pip install virtualenv`
-* `npm install -g typescript ts-node`
 * `pip3 install awscli --upgrade`
-* `npm install -g aws-cdk`
 * [Go](https://golang.org/dl/)
   - `export PATH=/usr/local/go/bin:$PATH`
   - `export GOPATH=$HOME/devel/go`
