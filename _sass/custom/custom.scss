@@ -51,7 +51,10 @@ p
 
 p.tagcloud
 {
+  margin: 0 auto;
+  width: 80%;
   text-align: center;
   line-height: 1.4;
-  word-spacing: 20px;
+  word-spacing: 10px;
+  overflow-wrap: break-word;
 }

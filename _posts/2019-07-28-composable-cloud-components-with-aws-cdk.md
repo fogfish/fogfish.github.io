@@ -7,7 +7,7 @@ tags:
   - coding
   - aws
   - aws cdk
-  - infrastructures as a code
+  - infrastructure as a code
   - pure functional
   - typescript
   - cloud

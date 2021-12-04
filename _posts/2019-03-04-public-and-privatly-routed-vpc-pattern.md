@@ -7,7 +7,7 @@ tags:
   - coding
   - aws
   - aws vpc
-  - infrastructures as a code
+  - infrastructure as a code
   - security
   - scalability
   - networking
