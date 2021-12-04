@@ -26,7 +26,7 @@ ul.posts span {
 # Highlights about technologies 
 
 [Technology Radar]({{ site.baseurl }}{% link tech/tech.md %}){: .btn .fs-5 .mb-4 .mb-md-0 .mr-2 }
-[Tags Cloud]({{ site.baseurl }}{% link tech/tags.md %}){: .btn .fs-5 .mb-4 .mb-md-0 .mr-2 }
+[Tags Cloud]({{ site.baseurl }}{% link tags.md %}){: .btn .fs-5 .mb-4 .mb-md-0 .mr-2 }
 
 <ul class="posts">
    {% for post in site.posts %}
