@@ -3,6 +3,10 @@ layout: post
 title: Passing Sensitive Data with JSON
 description: |
   Software engineers are responsible to retain confidentiality of sensitive data. The post shows usage of auto crypto codec with Algebraic Data Types.
+tags:
+  - json
+  - encryption
+  - aws kms
 ---
 
 
