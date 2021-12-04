@@ -44,9 +44,9 @@ ul.posts span
   font-size: 80%;
 }
 
-ul.posts a
+ul.posts li a
 {
-  white-space: "break-spaces";
+  white-space: "break-spaces" !important;
 }
 
 p
