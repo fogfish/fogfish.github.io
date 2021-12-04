@@ -4,6 +4,15 @@ title:  Migrate Your Application To Cloud Age
 description: |
   Microservices became a design style to implement applications in the cloud.
   It define system architectures, purify core business concepts, evolve solutions in parallel.
+tags:
+  - microservices
+  - non-functional requirements
+  - scalability
+  - consumer journey
+  - search
+  - domain driven design
+  - common data model
+  - distributed system
 ---
 
 # Migrate Your Application To Cloud Age

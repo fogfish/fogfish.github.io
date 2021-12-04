@@ -9,6 +9,7 @@ tags:
   - real-time analytics
   - knowledge graph
   - datalog
+  - consumer journey
 ---
 
 # Real-time consumer engagement
