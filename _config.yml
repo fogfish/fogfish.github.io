@@ -1,4 +1,4 @@
-title: 𝖎⋅𝖆𝖒⋅𝖋𝖔𝖌⋅𝖋𝖎𝖘𝖍
+title: 🆃🅴🅲🅷&🅵🅾🅶
 baseurl: ""
 url: "https://i.am.fog.fish"
 description: |
@@ -7,12 +7,15 @@ description: |
 
 theme: just-the-docs
 remote_theme: fogfish/just-the-docs
+color_scheme: site
 
-search_enabled: true
+search_enabled: false
 
 ga_tracking: UA-78986123-3
 
 aux_links:
+  "Tags Cloud":
+    - "/tags"
   "Twitter":
     - "https://twitter.com/_fogfish_"
   "GitHub":

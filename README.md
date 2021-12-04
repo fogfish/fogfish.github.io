@@ -5,13 +5,15 @@ This is the data for [my blog](https://i.am.fog.fish).
 
 ## Getting started
 
-See official MacOS installation [instructions](https://jekyllrb.com/docs/installation/macos/)
-
-```bash
-gem install --user-install bundler jekyll
-bundle install
-jekyll serve
 ```
+podman build -t i-am-fog-fish .
+podman run -it \
+  -v /mnt/macos/js/fogfish.github.io:/usr/src/app \
+  -p 4000:4000 \
+  i-am-fog-fish \
+  bundle exec jekyll serve -H 0.0.0.0 -t
+```
+
 
 ## License
 
