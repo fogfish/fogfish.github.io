@@ -33,7 +33,7 @@ Checklist to setup development environment from scratch
 * `npm install -g aws-cdk`
 * `brew install python3`
 * `python3 -m pip install virtualenv`
-* `pip3 install awscli --upgrade`
+* [AWS Commandline Utility v2](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2-mac.html)
 * [Go](https://golang.org/dl/)
   - `export PATH=/usr/local/go/bin:$PATH`
   - `export GOPATH=$HOME/devel/go`
