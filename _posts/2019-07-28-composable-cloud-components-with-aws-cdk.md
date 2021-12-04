@@ -2,7 +2,16 @@
 layout: post
 title:  Composable Cloud Components with AWS CDK
 description: |
-  Compose AWS CDK Components from small reusable elements using a purely functional method as a solution to scarp a boilerplate code. 
+  Compose AWS CDK Components from small reusable elements using a purely functional method as a solution to scarp a boilerplate code.
+tags:
+  - coding
+  - aws
+  - aws cdk
+  - infrastructures as a code
+  - pure functional
+  - typescript
+  - cloud
+  - boilerplate
 ---
 
 # Composable Cloud Components with AWS CDK

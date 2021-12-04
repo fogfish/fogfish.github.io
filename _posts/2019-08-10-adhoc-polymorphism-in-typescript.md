@@ -3,6 +3,13 @@ layout: post
 title:  Ad-Hoc polymorphism in TypeScript with implicit context
 description: |
   The post defines ad-hoc polymorphism techniques for TypeScript. It helps to define a function with several different types acting in a different way for each type.
+tags:
+  - coding
+  - typescript
+  - pure functional
+  - typeclasses
+  - generic
+  - polymorphism
 ---
 
 # Ad-hoc polymorphism in TypeScript with implicit context.

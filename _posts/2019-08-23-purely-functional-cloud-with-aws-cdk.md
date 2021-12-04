@@ -3,6 +3,15 @@ layout: post
 title:  Purely Functional Cloud Components with AWS CDK
 description: |
   A toolkit develops purely functional and high-order cloud components with AWS CDK. A shift from category of classes to pure functions simplifies the development.
+tags:
+  - coding
+  - aws
+  - aws cdk
+  - infrastructures as a code
+  - pure functional
+  - typescript
+  - cloud
+  - open source
 ---
 
 # Purely Functional Cloud Components with AWS CDK

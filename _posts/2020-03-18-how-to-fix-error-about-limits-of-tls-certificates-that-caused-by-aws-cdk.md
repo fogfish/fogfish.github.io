@@ -3,6 +3,11 @@ layout: post
 title: How To Fix Error About Limits of TLS Certificates That Caused by AWS CDK
 description: |
   You have reached your limit of 20 certificates in the last year due to Continuous Delivery Workflow. Use cross-stack references feature of AWS CDK to fix the issue.
+tags:
+  - coding
+  - aws
+  - aws cdk
+  - bugfix
 ---
 
 # How To Fix Error About Limits of TLS Certificates That Caused by AWS CDK

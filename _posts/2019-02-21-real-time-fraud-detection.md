@@ -10,6 +10,7 @@ tags:
   - fraud
   - datalog
   - open search
+  - open source
 ---
 
 # The real-time fraud detection

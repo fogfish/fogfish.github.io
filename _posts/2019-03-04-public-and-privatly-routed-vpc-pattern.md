@@ -4,12 +4,14 @@ title:  Public and Privately Routed VPC pattern
 description: |
   The routed VPC pattern is an universal and scalable pattern for AWS networking architecture.
 tags:
+  - coding
   - aws
-  - aws-vpc
+  - aws vpc
   - infrastructures as a code
   - security
   - scalability
   - networking
+  - cloud
 ---
 
 # Public and Privately Routed VPC pattern

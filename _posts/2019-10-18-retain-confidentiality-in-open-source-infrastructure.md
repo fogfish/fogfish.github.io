@@ -3,6 +3,13 @@ layout: post
 title:  Retain Confidentiality in Open Source Infrastructure.
 description: |
   Open Source Infrastructure uses confidential cloud resources. Key Vault addresses confidentiality challenge if you open sources your AWS CDK infrastructure.
+tags:
+  - coding
+  - aws
+  - aws cdk
+  - aws kms
+  - aws secret manager
+  - crypto
 ---
 
 

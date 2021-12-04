@@ -5,6 +5,7 @@ description: |
   Microservices became a design style to implement applications in the cloud.
   It define system architectures, purify core business concepts, evolve solutions in parallel.
 tags:
+  - architecture
   - microservices
   - non-functional requirements
   - scalability
@@ -13,6 +14,7 @@ tags:
   - domain driven design
   - common data model
   - distributed system
+  - cloud
 ---
 
 # Migrate Your Application To Cloud Age
