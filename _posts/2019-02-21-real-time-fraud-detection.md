@@ -3,6 +3,13 @@ layout: post
 title:  The real-time fraud detection
 description: |
   The real-time fraud detection is about understand consumer transaction, deduct relevant knowledge and accumulate consumer profile as a set of feature vectors.
+tags:
+  - thoughts
+  - analytics
+  - FinTech
+  - fraud
+  - datalog
+  - open search
 ---
 
 # The real-time fraud detection
