@@ -3,6 +3,12 @@ layout: post
 title:  Deduct consumer behavior in real-time.
 description: |
   The interactive marketing is about collecting and deducting consumer behavior in real-time manner using knowledge management and graph systems.
+tags:
+  - thoughts
+  - analytics
+  - real-time analytics
+  - knowledge graph
+  - datalog
 ---
 
 # Real-time consumer engagement

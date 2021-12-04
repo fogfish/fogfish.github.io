@@ -13,6 +13,11 @@ search_enabled: true
 
 ga_tracking: UA-78986123-3
 
+collections:
+  tag:
+    output: true
+    permalink: /:collection/:name
+
 aux_links:
   "Tags Cloud":
     - "/tags"
