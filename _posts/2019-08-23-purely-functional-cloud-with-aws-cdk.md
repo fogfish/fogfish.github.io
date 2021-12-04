@@ -11,6 +11,7 @@ tags:
   - pure functional
   - typescript
   - cloud
+  - algebra
   - open source
 ---
 
