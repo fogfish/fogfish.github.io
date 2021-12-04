@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Tags
+title: Tags Cloud
 permalink: /tags
 search_exclude: true
 ---
