@@ -11,7 +11,7 @@ tags:
   - security
   - scalability
   - networking
-  - cloud
+  - cloud pattern
 ---
 
 # Public and Privately Routed VPC pattern
