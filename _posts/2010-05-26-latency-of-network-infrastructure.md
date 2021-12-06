@@ -31,9 +31,12 @@ The complexity of the Internet belongs at the edges, and the IP layer of the Int
 
 *Tier 3* solely purchase IP transit from other networks.
 
+**Major latency concern** is Propagation and Queue delays.
+
+The figure below shows a simplistic architecture of IP networks. 
+
 ![Architecture of IP network](/assets/images/2010-05-26-ip-net-architecture.svg)
 
-**Major latency concern** is Propagation and Queue delays.
 
 ## Data Center
 
