@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  What is the user expectation about the latency of Internet Services?
+title:  What is the user's expectation about the latency of Internet Services?
 description: |
   End-to-end latency is one of user-oriented characteristics used for quality assessment of distributed software architecture. Research indicates that a service fails to meet user needs if a transaction cannot be accomplished within 3 - 4 seconds.
 tags:
@@ -14,7 +14,7 @@ tags:
   - microservices
 ---
 
-# What is the user expectation about the latency of Internet Services?
+# What is the user's expectation about the latency of Internet Services?
 
 Design and best practices for latency optimization on layer 1 through layer 3 of network stack is widely studies by Cisco in the paper "Design Best Practices for Latency Optimization" and IP Packet Delay Variation Metric for IP Performance Metrics, [RFC 3393](https://datatracker.ietf.org/doc/html/rfc3393). Souder's book "High Performance Web Sites" guides through previous research on layer 7 latencies, which covers behavior of web application and aspects of UX rendering by web browser. The list of valid techniques has been discussed and the major outcome is that only 20% of time is spent to retrieve the main HTML document, the other 80% is consumed to download and render JavaScripts, Style Sheets, images, etc.
 
