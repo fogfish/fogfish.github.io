@@ -2,7 +2,7 @@
 layout: post
 title:  In-depth guide to sources of latency in distributed systems.
 description: |
-  Distributed systems involves various technologies and communication principles that brings overhead and latencies. The root cause of latencies varies from physical properties of network to the quality of software components. The post discussed sources of latencies from prism of infrastructure, protocol and application.
+  Distributed systems involve various technologies and communication principles that bring overhead and latencies. The root cause of latencies varies from physical properties of the network to the quality of software components. The post discussed sources of latencies from the prism of infrastructure, protocol and application.
 
 tags:
   - thoughts
