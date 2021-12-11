@@ -27,7 +27,7 @@ tᵖ = L/S
 
 Table below summarizes the overall effect of increasing distances. You can minimize this effect by reducing the distance data must travel.
 
-| Region | Distance (km) | tᵖ (ms)
+| Region | Distance (km) | tᵖ (ms) |
 | --- | --- | --- |
 | Europe | 2000 | < 10 |
 | US | 3000 | 10 - 15 |
@@ -57,3 +57,20 @@ Store-and-forward vs cut-through switching
 
 ![World-wide network delays](/assets/images/2010-06-14-world-wide-network-delays.png)
 
+
+## Transmission delay
+
+* time required to serialize packet bits into the link.
+* constrained by carrier signal, modulation and used frequencies.
+* expressed as bits per second (bandwidth), often bandwidth is shared among network users.
+
+Table below summarizes the overall effect of transmission delay for various technologies
+
+| Name | Bandwidth | TXD 64 bytes (ms) | TXD 1500 bytes (ms) |
+| --- | --- | --- | --- |
+| WCDMA | 144 Kbps | 3.56 | 83.3 |
+| ADSL2+ | 24 Mbps | 0.02 | 0.50 |
+| WLAN 802.11g | 54 Mbps | 0.01 | 0.22 |
+| Fast Ethernet | 100 Mbps | 0.005 | 0.120 |
+| OC12 | 622 Mbps | <0.001 | 0.019 |
+| Gigabit Ethernet | 1 Gbps | <0.001 | 0.012 |
