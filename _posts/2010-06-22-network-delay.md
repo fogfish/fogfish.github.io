@@ -31,7 +31,7 @@ The clock synchronization, packet collections and tooling aspects are the major 
 * time required to establish TCP/IP connection with remote host
 * time required to reliably deliver a message for chatty protocols
 
-![Network delay](/assets/images/2010-06-22-network-delays.png)
+![Network delay](/assets/images/2010-06-22-network-delays.svg)
 
 Easy way to measure RTT is a ping command line utility, it allows to sample latency of ICMP ECHO packets. The size of ICMP packet should not exceed either 40 bytes or 24 bytes that corresponds to TCP SYN and SYN,ACK messages, keep in mind that ICMP messages has 8 byte header:
 
