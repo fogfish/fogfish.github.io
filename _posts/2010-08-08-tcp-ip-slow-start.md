@@ -9,12 +9,13 @@ tags:
   - latency
   - networking
   - internet
+  - protocols
   - tcp/ip
 ---
 
 # Effect of TCP/IP slow start on the communication latency
 
-**tcp/ip summary**
+## TCP/IP protocol summary
 
 * connection-oriented, TCP/IP handshake is required before data transmission. Handshake performance is constrained by Network delay.
 * full duplex
