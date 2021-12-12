@@ -41,7 +41,7 @@ A performance of cryptographic algorithms was a primary bottleneck couple of yea
 
 A full TLS/SSL handshake demands at least two round trips in addition to TCP/IP connection setup.
 
-![tls handshake procedure](/assets/images/2010-08-08-tls.svg)
+![tls handshake procedure](/assets/images/2010-08-26-tls.svg)
 
 **first round trip**
 * ClientHello contains a highest supported TLS protocol, a random number, a list of supported cipher suites and compression methods.
@@ -64,7 +64,7 @@ A false start [proposal](https://tools.ietf.org/html/draft-bmoeller-tls-falsesta
 * Both peer received and successfully validated "Finished" message. Hand- shake completed successfully.
 * "Finished" message cannot be validated. Handshake is failed due to transmission error or attacker targets the connection.
 
-![tls false start](/assets/images/2010-08-08-tls-false-start.svg)
+![tls false start](/assets/images/2010-08-26-tls-false-start.svg)
 
 
 ## Certificate size
