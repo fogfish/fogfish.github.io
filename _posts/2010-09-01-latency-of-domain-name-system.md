@@ -39,7 +39,7 @@ People have focused on DNS latency since 1992 in broadband networks. We have als
 
 **Latency of 90% queries do not exceed network delay more then 5%**
 
-![dns latency at mobile network](/assets/images/2010-09-01-dns-mobile-latency.svg)
+![dns latency at mobile network](/assets/images/2010-09-01-dns-mobile-latency.png)
 
 ## HowTo Measure DNS latency
 
@@ -47,7 +47,7 @@ Time taken to execute DNS transactions over wireless networks consists of UDP pr
 
 **Latency of DNS transaction do not exceed latency of direct lookup on authoritative more then 5% measured by client**
 
-![latency of dns transaction at mobile network](/assets/images/2010-09-01-dns-tx-latency.svg)
+![latency of dns transaction at mobile network](/assets/images/2010-09-01-dns-tx-latency.png)
 
 Measure DNS latency using custom DNS stub component that generates DNS request via non-blocking datagram socket. The stub bypasses DNS services provided by OS such as `gethostbyhame()`, that allows us to avoid the effect of local in-device DNS cache.
 
