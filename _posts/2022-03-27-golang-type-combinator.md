@@ -143,7 +143,7 @@ func (ordInt) Equal(a, b, int) bool { return eq.Int.Equal(a, b) }
 
 Sub-typing combinator is simple but yet powerful to built complex structures from "atomic" type traits. It also defines the notion of substitutability in the generic computation, which is written to operate on elements of type T, and can also operate on instances of sub-types.
 
-See [an example of sub-typing](../examples/subtyping/subtyping.go)
+[Example of sub-typing](https://github.com/fogfish/golem/blob/main/examples/subtyping/subtyping.go){: .btn }
 
 
 ## Lifting
@@ -238,9 +238,7 @@ func (eq ProductEq2[T, A, B]) Equal(a, b T) bool {
 The homogenous product pattern is a building block for composition of "atomic" type traits into complex structures to deal with algebraic data types. The new instance of `Eq` trait for `ExampleType` is created with
 
 ```go
-ProductEq2[ExampleType, int, string]{Int, String,
-  func(x ExampleType) (int, string) { return x.A, x.B },
-}
+ProductEq2[ExampleType, int, string]{Int, String, func(x ExampleType) (int, string) { return x.A, x.B } }
 ```
 
 [Example of homogenous product](https://github.com/fogfish/golem/blob/main/examples/homogenous/homogenous.go){: .btn }
@@ -291,7 +289,7 @@ Let's consider a `Foldable` abstraction that represents data structures that can
 
 ```go
 type Foldable[T any] interface {
-  Fold(a T, seq []T) (x T)
+  Fold(T, []T) T
 }
 ```
 
