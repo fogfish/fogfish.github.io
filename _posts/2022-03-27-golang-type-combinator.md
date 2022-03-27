@@ -88,7 +88,7 @@ The type trait is the combinator pattern with "atomic" and composable element su
 
 The type trait pattern looks similar to type class. Computer Science has defined the type class as a construct "that supports ad hoc polymorphism. This is achieved by adding constraints to type variables in parametrically polymorphic types. Such a constraint typically involves a type class T and a type variable a, and means that a can only be instantiated to a type whose members support the overloaded operations associated with T.". However, the Golang type system is strictly less powerful and does not support type classes, it only supports "a kind of zeroth-order type class", while concepts around type classes are often associated with higher-kinded polymorphism. The type trait abstraction as it is defined here provides better composability than the Golang interface but less powerful in comparison with Haskell's type classes.    
 
-[Example of type trait]({% link https://github.com/fogfish/golem/blob/main/examples/typetrait/typetrait.go %}){: .btn .fs-5 .mb-4 .mb-md-0 .mr-2 }
+[Example of type trait](https://github.com/fogfish/golem/blob/main/examples/typetrait/typetrait.go){: .btn }
 
 <!--
 See [an example of type trait](../examples/typetrait/typetrait.go)
