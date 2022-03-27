@@ -7,7 +7,7 @@ tags:
   - coding
   - typescript
   - pure functional
-  - typeclasses
+  - type classes
   - generic
   - polymorphism
 ---

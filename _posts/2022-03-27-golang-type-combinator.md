@@ -1,3 +1,21 @@
+---
+layout: post
+title: A Guide To Pure Type Combinators in Golang or How to Stop Worrying and Love the Functional Programming
+description: |
+  Combinators open up an opportunity to depict computation problems in terms of fundamental elements. It delivers powerful patterns for functional programming and make a bridge to the way humans think, allowing anyone to represent anything using structured symbolic expressions. Let's advance these patterns towards the Golang type system and define combinators over types and their instances to derive complex structures of type T. There are 7 patterns to consider and express their semantic with Golang despite a fact that Golang type system is less powerful and does not support type classes. In the end, combinators are fundamentally computational constructs.
+tags:
+  - coding
+  - pure functional
+  - golang
+  - algebra
+  - type system
+  - type classes
+  - generic
+  - polymorphism
+  - combinators
+  - type trait
+---
+
 # A Guide To Pure Type Combinators in Golang or How to Stop Worrying and Love the Functional Programming
 
 Humans have developed ideas of representing things using a formal "system" since ancient history - Aristotle’s logic, Euclid’s geometry are good examples. The formalism allows anyone to proof and deduct purely within the system so that it defines a concrete solution of the current problem. System of combinators has been known for 100 years since Moses Schönfinkel developed a universal computation system that has been researched since together with mathematical logic, lambda calculus and category theory. Combinators open up an opportunity to depict computation problems in terms of fundamental elements like physics talks about the universe in terms of particles. The only definite purpose of combinators are building blocks for composition of "atomic" functions into computational structures from concrete problem "domain". So far, combinators remain as powerful symbolic expressions in computational languages.  
@@ -49,7 +67,8 @@ package eq
 eqInt declares a new instance of Eq trait, which is a real type.
 The real type "knows" everything about equality in its own domain.
 The instance of Eq is created as type over string, it is an intentional
-technique to create a namespace using Golang constants. The instance of trait is referenced as eq.Int in the code.
+technique to create a namespace using Golang constants.
+The instance of trait is referenced as eq.Int in the code.
 */
 type eqInt string
 
@@ -90,9 +109,6 @@ The type trait pattern looks similar to type class. Computer Science has defined
 
 [Example of type trait](https://github.com/fogfish/golem/blob/main/examples/typetrait/typetrait.go){: .btn }
 
-<!--
-See [an example of type trait](../examples/typetrait/typetrait.go)
--->
 
 ## Sub-typing
 
@@ -168,7 +184,7 @@ var Int Eq[int] = eq.FromEq[int](Equal)
 
 The lifting pattern is a very powerful one. It not only leverages the gap between functional and type traits domains but also facilitates the composable and re-usable definition of type traits using closures and other pure functional concepts.
 
-See [an example of lifting](../examples/lifting/lifting.go)
+[Example of lifting](https://github.com/fogfish/golem/blob/main/examples/lifting/lifting.go){: .btn }
 
 
 ## Homogenous product
@@ -227,7 +243,7 @@ ProductEq2[ExampleType, int, string]{Int, String,
 }
 ```
 
-See [an example of homogenous product](../examples/homogenous/homogenous.go)
+[Example of homogenous product](https://github.com/fogfish/golem/blob/main/examples/homogenous/homogenous.go){: .btn }
 
 
 ## Contra Variant Functor
@@ -264,7 +280,7 @@ ContraMapEq[int, ExampleType]{Int}.FMap(
 
 Often, functional programming literature explains the purpose of contra variant functors on the example of type safe sorting or filtering algorithms where applications specific algebraic data types are processed with transformation into the domain of primitive built-in types.
 
-See [an example of contra variant functions](../examples/contramap/contramap.go)
+[Example of contra variant functor](https://github.com/fogfish/golem/blob/main/examples/contramap/contramap.go){: .btn }
 
 
 ## Compose generic types
@@ -305,7 +321,7 @@ func (f Folder[T]) Fold(a T, seq []T) (x T) {
 
 The compose generic types pattern follows Hilbert’s axiomatic method "to build everything from as few notions as possible". It uses standard Golang notations from which other combinator notations are constructed. The approach discussed by the compose generic types pattern is only the solution to parametrize one type class over another one until higher kinded polymorphism is fully supported at Golang.
 
-See [an example of compose generic types](../examples/semigroup/semigroup.go)
+[Example of compose generic types](https://github.com/fogfish/golem/blob/main/examples/semigroup/semigroup.go){: .btn }
 
 
 ## Heterogeneous product
@@ -352,7 +368,7 @@ func (seq SeqEq[S, T]) Equal(a, b S) bool { /* ... */ }
 
 Newly composed trait is a product of two types.
 
-See [an example of heterogenous product](../examples/heterogenous/heterogenous.go)
+[Example of heterogenous product](https://github.com/fogfish/golem/blob/main/examples/heterogenous/heterogenous.go){: .btn }
 
 
 ## Afterwords
