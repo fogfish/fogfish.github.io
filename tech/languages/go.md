@@ -10,7 +10,7 @@ description: |
 
 # Go
 
-#### Assess
+[Scheduling In Go : Part I - OS Scheduler](https://www.ardanlabs.com/blog/2018/08/scheduling-in-go-part1.html), [Scheduling In Go : Part II - Go Scheduler](https://www.ardanlabs.com/blog/2018/08/scheduling-in-go-part2.html) and [Scheduling In Go : Part III - Concurrency](https://www.ardanlabs.com/blog/2018/12/scheduling-in-go-part3.html) provide an understanding of the mechanics and semantics behind the scheduler in Go
 
 [Go AST Viewer](http://goast.yuroyoro.net) - online tool for analysis and visualization of ast
 
@@ -20,8 +20,6 @@ description: |
 The default un-buffered channels pass values from one goroutine to another, one at a time. The goroutine that writes to the channel blocks until another goroutine reads from the same channel. A buffered channel gives writers a bit more flexibility. When a channel is buffered, a set number of values can be written to the channel and not read before the channel blocks. It behaves like a synchronized queue with a bounded size. The post explains how to build Erlang's style unbounded queues.
 
 [Organising Database Access in Go](https://www.alexedwards.net/blog/organising-database-access) In the context of a web application what would you consider a Go best practice for accessing the database in (HTTP or other) handlers? The post analyses various design pattern they pros and cons.
-
-#### Adopt
 
 [Standard Package Layout](https://medium.com/@benbjohnson/standard-package-layout-7cdbc8391fc1) - These are seen as big issues in the Go community but there’s another issue that’s rarely mentioned — application package layout.
 
