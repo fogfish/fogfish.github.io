@@ -51,3 +51,8 @@ description: |
 ## S3
 
 [IAM Policies and Bucket Policies and ACLs! Oh, My! (Controlling Access to S3 Resources)](https://aws.amazon.com/blogs/security/iam-policies-and-bucket-policies-and-acls-oh-my-controlling-access-to-s3-resources/) the distinction between IAM policies, S3 bucket policies, S3 ACLs, and when to use each. They’re all part of the AWS access control toolbox, but they differ in how they’re used.
+
+## RDS / Aurora
+
+[Is Aurora PostgreSQL really faster and cheaper than RDS PostgreSQL – Benchmarking](https://www.migops.com/blog/2021/11/26/is-aurora-postgresql-really-faster-and-cheaper-than-rds-postgresql-benchmarking/) why there is a huge CPU utilization on their Aurora instances. Because, this did force our customers to upgrade their Aurora Instance types to resolve performance issues. Some customers have also seen Aurora IOPS being the major reason for heavy bills on Aurora PostgreSQL. Some of our customers also got surprised looking at some wait events on Aurora PostgreSQL that are never seen on PostgreSQL documentation.
+
