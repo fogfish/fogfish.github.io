@@ -13,6 +13,7 @@ tags:
   - cloud
   - algebra
   - open source
+  - combinators
 ---
 
 # Purely Functional Cloud Components with AWS CDK
