@@ -3,7 +3,7 @@ layout: default
 title: Distributed Systems
 parent: Techniques
 grand_parent: Technology Radar
-nav_order: 2
+nav_order: 3
 description: |
   Distributed Systems  
 ---
