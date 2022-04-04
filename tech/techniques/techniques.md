@@ -41,3 +41,6 @@ description: |
 [4 Rules for Intuitive UX](https://learnui.design/blog/4-rules-intuitive-ux.html) - advice on improving the UX of your designs WITHOUT hours of user research sessions, paper prototyping playtime, or any other trendy UX buzzwords.
 
 [5 способов найти фото для блога без нарушения авторских прав](https://zen.yandex.ru/media/id/5a940b5f3c50f7398387469d/5-sposobov-naiti-foto-dlia-bloga-bez-narusheniia-avtorskih-prav-5ae08a345f4967204194b6e3) - Поиск иллюстраций для статьи или короткого поста — постоянная головная боль блогера. Проверенные сервисы для поиска изображений и другие легальные источники картинок.
+
+[Designing for different states in the UI](https://uxdesign.cc/designing-for-different-ui-states-87d60130f85f) A common trap for designers is to only focus on creating designs that represent the perfect state of a user interface. It is easy to design for when everything is full of beautifully formatted content. But there is a problem with this. A large percentage of users experience completely different states. Ones that are missing data or full of errors.
+
