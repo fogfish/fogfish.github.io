@@ -51,3 +51,6 @@ The default un-buffered channels pass values from one goroutine to another, one 
 [Iterating Over Slices In Go](https://www.ardanlabs.com/blog/2013/09/iterating-over-slices-in-go.html) In Go everything is pass by value. We can pass by value the address of an object or pass by value a copy of an object. That includes function parameters, return values and when iterating over a slice, map or channel. 
 
 [Recursion And Tail Calls In Go](https://www.ardanlabs.com/blog/2013/09/recursion-and-tail-calls-in-go_26.html) Go does not optimize for recursion, even if tail calls are explicit. The post explains in details a Golang design of recursive calls and how to improve the memory consumption in recursive algorithms.
+
+[Golang Unsafe Type Conversions and Memory Access](https://hackernoon.com/golang-unsafe-type-conversions-and-memory-access-odz3yrl) Go is a strongly typed, you have to convert variable from one type to another to use in different parts of application. But sometimes you need to step around this type safety. It could be needed to optimization of bottle necks in high load systems, where every tick counts. Unsafe operation potentially could safe a lot of allocations. Unsafe also allows to hack into any struct field, including slices, strings, maps etc.
+
