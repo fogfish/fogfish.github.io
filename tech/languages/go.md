@@ -27,10 +27,6 @@ The default un-buffered channels pass values from one goroutine to another, one 
 
 [Type embedding in Go](https://travix.io/type-embedding-in-go-ba40dd4264df) - Go does not provide the typical, type-driven notion of subclassing, but it does have the ability to “borrow” pieces of an implementation by embedding types within a struct or interface. In fact, type embedding is product type composition. The article explains basics behind the embedding.
 
-[Errors are values](https://blog.golang.org/errors-are-values) - Error handling in Go is different than other functional programming. Usually Either monad helps a lot. Go programmers miss a fundamental point about errors: Errors are values. The article shows a few patterns on error handling with Go.
-
-[Constant errors](https://dave.cheney.net/2016/04/07/constant-errors) post show up the issue with sentinel error values in Go, it proposes alternative and type-safe solution to express errors using `const`. The approach advances error declaration and handling towards behaviour-based approach to [inspect errors](https://dave.cheney.net/2014/12/24/inspecting-errors). 
-
 
 [Why doesn't Go have variance in its type system?](https://blog.merovius.de/2018/06/03/why-doesnt-go-have-variance-in.html) - It explain what co-, contra- and invariance are and what the implications for Go's type system would be. In particular, why it's impossible to have variance in slices.
 
@@ -53,4 +49,17 @@ The default un-buffered channels pass values from one goroutine to another, one 
 [Recursion And Tail Calls In Go](https://www.ardanlabs.com/blog/2013/09/recursion-and-tail-calls-in-go_26.html) Go does not optimize for recursion, even if tail calls are explicit. The post explains in details a Golang design of recursive calls and how to improve the memory consumption in recursive algorithms.
 
 [Golang Unsafe Type Conversions and Memory Access](https://hackernoon.com/golang-unsafe-type-conversions-and-memory-access-odz3yrl) Go is a strongly typed, you have to convert variable from one type to another to use in different parts of application. But sometimes you need to step around this type safety. It could be needed to optimization of bottle necks in high load systems, where every tick counts. Unsafe operation potentially could safe a lot of allocations. Unsafe also allows to hack into any struct field, including slices, strings, maps etc.
+
+## Errors
+
+[Why Go gets exceptions right](https://dave.cheney.net/2012/01/18/why-go-gets-exceptions-right) explains how the error handling made right in Go to compare with C, C++ and Java.
+
+[Errors are values](https://blog.golang.org/errors-are-values) - Error handling in Go is different than other functional programming. Usually Either monad helps a lot. Go programmers miss a fundamental point about errors: Errors are values. The article shows a few patterns on error handling with Go.
+
+[Constant errors](https://dave.cheney.net/2016/04/07/constant-errors) post show up the issue with sentinel error values in Go, it proposes alternative and type-safe solution to express errors using `const`. The approach advances error declaration and handling towards behaviour-based approach to [inspect errors](https://dave.cheney.net/2014/12/24/inspecting-errors). 
+
+[Inspecting errors](https://dave.cheney.net/2014/12/24/inspecting-errors) Don’t assert errors for type, assert for behaviour. For package authors, if your package generates errors of a temporary nature, ensure you return error types that implement the respective interface methods. For package users, if you need to inspect an error, use interfaces to assert the behaviour you expect, not the error’s type.
+
+[Don’t just check errors, handle them gracefully](https://dave.cheney.net/2016/04/27/dont-just-check-errors-handle-them-gracefully) in-depth explanation about error handling strategies.  
+
 
