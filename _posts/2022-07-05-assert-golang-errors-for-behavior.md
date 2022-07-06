@@ -229,7 +229,7 @@ Implementing this behavior by errors make it easy to handle errors at the REST c
 
 ## Non Ideal State
 
-Non Ideal State does not really differ a lot from recoverable errors, it is essentially a subcategory of those. The category of Non Ideal State errors helps to distinguish errors caused by the unacceptable input from clients. One of the classical examples is the “Not Found” error. Typically, storage fails with an error if requested items do not exist. The application cannot recover from the error, it is only passed through the error to “user experience”. Use `interface { NotFound() bool }` behavior for this purpose. Any other Non Ideal State can be modeled similarly.      
+Non Ideal State does not really differ a lot from recoverable errors, it is essentially a subcategory of those. The category of Non Ideal State errors helps to distinguish errors caused by the unacceptable input from clients. One of the classical examples is the “Not Found” error. Typically, storage fails with an error if requested items do not exist. The application cannot recover from the error, it is only passed through the error to “user experience”. Use `interface { NotFound() string }` behavior for this purpose. Any other Non Ideal State can be modeled similarly.  
 
 
 ## Evolving Opaque Errors
@@ -299,6 +299,7 @@ Finally, implement recovery routines from error at “single” error handling c
 
 This simple technique makes a robust and scalable error handling path in your application, while adhering to three important recommendations: “Assert errors for behavior, not type”, “Annotate errors with the context” and “Only handle errors once”. 
 
+The short summary of usable behavioral is published in [**the gist**](https://gist.github.com/fogfish/061c0da30394eb0abbc0952764a2aaf9) 
 
 ## References
 
