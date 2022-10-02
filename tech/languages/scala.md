@@ -19,3 +19,5 @@ description: |
 [The Type Astronaut's Guide to Shapeless Book](https://underscore.io/books/shapeless-guide/) - aimed at experienced Scala hitch hikers with an interest in generic programming and boilerplate elimination. The book walks you through one of the main use cases for shapeless – automatic, boilerplate-free derivation of type class instances.  
 
 [Building a REST API with Finch and Finagle](https://andrew-jones.com/blog/building-a-rest-api-with-finch-and-finagle/) - step-by-step tutorial to create a simplest proxy endpoint with Finch and Finagle.
+
+[A JSON library for Scala powered by Cats](https://circe.github.io/circe/)
