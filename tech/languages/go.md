@@ -50,6 +50,7 @@ description: |
 [Building an Unbounded Channel in Go](https://medium.com/capital-one-tech/building-an-unbounded-channel-in-go-789e175cd2cd) 
 The default un-buffered channels pass values from one goroutine to another, one at a time. The goroutine that writes to the channel blocks until another goroutine reads from the same channel. A buffered channel gives writers a bit more flexibility. When a channel is buffered, a set number of values can be written to the channel and not read before the channel blocks. It behaves like a synchronized queue with a bounded size. The post explains how to build Erlang's style unbounded queues.
 
+[Go channels across many machines](https://medium.com/@matryer/introducing-vice-go-channels-across-many-machines-bcac1147d7e2) Concurrency is a great way to get more stuff done faster. Go channels are perfect for enabling multiple concurrent goroutines to safely communicate within a single process, but if we want to let multiple machines/nodes communicate in a similar way, we have to write completely different code and integrate with messaging queues, gRPC, or something else.
 
 ## Language & Runtime
 
