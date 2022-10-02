@@ -22,3 +22,7 @@ description: |
 
 [Lightweight higher-kinded polymorphism](https://www.cl.cam.ac.uk/~jdy22/papers/lightweight-higher-kinded-polymorphism.pdf) Higher-kinded polymorphism is an essential component of many functional programming techniques such as monads, folds, and embedded DSLs. We show how to express higher-kinded polymorphism in OCaml with- out functors, using an abstract type app to represent type application, and opaque brands to denote abstractable type constructors. We demonstrate the flexibility of our approach by using it to translate a variety of standard higher-kinded programs into functor-free OCaml code.
 
+## Data Structures
+
+[Streams](https://srfi.schemers.org/srfi-41/srfi-41.html) Streams, sometimes called lazy lists, are a sequential data structure containing elements computed only on demand. A stream is either null or is a pair with a stream in its cdr. Since elements of a stream are computed only when accessed, streams can be infinite. Once computed, the value of a stream element is cached in case it is needed again.
+

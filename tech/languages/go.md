@@ -22,6 +22,7 @@ description: |
 
 [Iterating Over Slices In Go](https://www.ardanlabs.com/blog/2013/09/iterating-over-slices-in-go.html) In Go everything is pass by value. We can pass by value the address of an object or pass by value a copy of an object. That includes function parameters, return values and when iterating over a slice, map or channel. 
 
+[A Survey of Iterator (or Generator) Patterns in golang](https://ewencp.org/blog/golang-iterators/) what the canonical iterator pattern in Go is: what’s the interface and the implementation? The post covers the basic options for a forward-only iterator (which admittedly simplifies the problem, mainly focusing on implementation rather than the appropriate interface, but this is also the most common type of iterator we need).
 
 ## Type System
 
@@ -46,6 +47,10 @@ description: |
 
 
 ## Channels
+
+[The Behavior Of Channels](https://www.ardanlabs.com/blog/2017/10/the-behavior-of-channels.html) Any one who working with Go’s channels for the first time can make mistake of thinking about channels as a data structure. It’s best to forget about how channels are structured and focus on how they behave. Do not think about channels as a queue, think about one thing: signaling. A channel allows one goroutine to signal another goroutine about a particular event. Signaling is at the core of everything you should be doing with channels. The article depicts attributes of signalling system: Guarantee Of Delivery, State and With or Without Data. It relates to the question: 
+
+[Do buffered channels maintain order?](https://stackoverflow.com/questions/25795131/do-buffered-channels-maintain-order) 
 
 [Building an Unbounded Channel in Go](https://medium.com/capital-one-tech/building-an-unbounded-channel-in-go-789e175cd2cd) 
 The default un-buffered channels pass values from one goroutine to another, one at a time. The goroutine that writes to the channel blocks until another goroutine reads from the same channel. A buffered channel gives writers a bit more flexibility. When a channel is buffered, a set number of values can be written to the channel and not read before the channel blocks. It behaves like a synchronized queue with a bounded size. The post explains how to build Erlang's style unbounded queues.

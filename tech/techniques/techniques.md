@@ -17,22 +17,10 @@ description: |
 
 [Architecture & Design](https://less.works/less/technical-excellence/architecture-design.html) it offers a few behavior-oriented tips related to design and large-scale development with agility, with a few noteworthy technically oriented tips–some analogous to desire lines.
 
-## Machine Learning
-
-#### Assess
-
-[MIT Deep Learning Book](https://github.com/janishar/mit-deep-learning-book-pdf) - This is the most comprehensive book available on the deep learning. Written by three experts in the field, Deep Learning is the only comprehensive book on the subject.
-
-[Breaking CAPTCHA Using Machine Learning in 0.05 Seconds](https://medium.com/towards-artificial-intelligence/breaking-captcha-using-machine-learning-in-0-05-seconds-9feefb997694) - technique uses GAN networks to synthesize process of CAPTCHA generation. THe solution is extremely interesting for other problem domains with absence of large datasets. 
-
-#### Adopt
-
-[The Rise of Generative Adversarial Networks](https://blog.usejournal.com/the-rise-of-generative-adversarial-networks-be52d424e517) - Overview of GAN networks. They can generate high-quality images, enhance photos, generate images from text, convert images from one domain to another, change the appearance of the face image as age progresses and many more. The list is endless.
+[Goodbye Microservices: From 100s of problem children to 1 superstar](https://segment.com/blog/goodbye-microservices/) Microservices is the architecture du jour. Coming of age alongside this trend, Segment adopted this as a best practice early-on, which served us well in some cases, and, as you’ll soon learn, not so well in others.
 
 
 ## User Experience
-
-#### Adopt
 
 [Design Better Forms](https://uxdesign.cc/design-better-forms-96fadca0f49c) - Highlights a common mistakes designer makes on Web Forms and How to avoid them.
 
@@ -44,3 +32,4 @@ description: |
 
 [Designing for different states in the UI](https://uxdesign.cc/designing-for-different-ui-states-87d60130f85f) A common trap for designers is to only focus on creating designs that represent the perfect state of a user interface. It is easy to design for when everything is full of beautifully formatted content. But there is a problem with this. A large percentage of users experience completely different states. Ones that are missing data or full of errors.
 
+[Country Flags](https://github.com/hampusborgos/country-flags)

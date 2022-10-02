@@ -56,3 +56,17 @@ description: |
 
 [Is Aurora PostgreSQL really faster and cheaper than RDS PostgreSQL – Benchmarking](https://www.migops.com/blog/2021/11/26/is-aurora-postgresql-really-faster-and-cheaper-than-rds-postgresql-benchmarking/) why there is a huge CPU utilization on their Aurora instances. Because, this did force our customers to upgrade their Aurora Instance types to resolve performance issues. Some customers have also seen Aurora IOPS being the major reason for heavy bills on Aurora PostgreSQL. Some of our customers also got surprised looking at some wait events on Aurora PostgreSQL that are never seen on PostgreSQL documentation.
 
+## Lambda
+
+[Introducing AWS Lambda Extensions](https://aws.amazon.com/blogs/compute/introducing-aws-lambda-extensions-in-preview/) AWS Lambda is announcing a preview of Lambda Extensions, a new way to easily integrate Lambda with your favorite monitoring, observability, security, and governance tools. In this post I explain how Lambda extensions work, how you can begin using them, and the extensions from AWS Lambda Ready Partners that are available today.
+
+[Caching data and configuration settings with AWS Lambda extensions](https://aws.amazon.com/blogs/compute/caching-data-and-configuration-settings-with-aws-lambda-extensions/) Post shows how to build a flexible in-memory AWS Lambda caching layer using Lambda extensions. Lambda functions use REST API calls to access the data and configuration from the cache. This can reduce latency and cost when consuming data from AWS services such as Amazon DynamoDB, AWS Systems Manager Parameter Store, and AWS Secrets Manager. See [demo of the extension](https://github.com/aws-samples/aws-lambda-extensions/tree/main/cache-extension-demo).
+
+# Dynamo
+
+[Best practices for managing many-to-many relationships](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/bp-adjacency-graphs.html) Adjacency lists are a design pattern that is useful for modeling many-to-many relationships in Amazon DynamoDB. More generally, they provide a way to represent graph data (nodes and edges) in DynamoDB.
+
+[The Ten Rules for Data Modeling with DynamoDB](https://www.trek10.com/blog/the-ten-rules-for-data-modeling-with-dynamodb) Modeling your data in DynamoDB is significantly different than modeling in a traditional relational database. And if you try to model your DynamoDB table like your relational database, you'll be in a world of hurt...
+
+[Data Modeling for DynamoDB Single Table Design](https://www.sensedeep.com/blog/posts/2021/dynamodb-singletable-design.html) best practices have evolved around DynamoDB single-table design patterns where one database table serves the entire application and holds multiple different application entities.
+
