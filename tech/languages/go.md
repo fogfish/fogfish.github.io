@@ -24,6 +24,8 @@ description: |
 
 [A Survey of Iterator (or Generator) Patterns in golang](https://ewencp.org/blog/golang-iterators/) what the canonical iterator pattern in Go is: what’s the interface and the implementation? The post covers the basic options for a forward-only iterator (which admittedly simplifies the problem, mainly focusing on implementation rather than the appropriate interface, but this is also the most common type of iterator we need).
 
+[Golang RegExp uses linear time](https://github.com/golang/go/blob/master/src/regexp/regexp.go) The regexp implementation provided by Go is guaranteed to run in time linear in the size of the input. This is a property not guaranteed by most open source implementations of regular expressions.
+
 ## Type System
 
 [Type embedding in Go](https://travix.io/type-embedding-in-go-ba40dd4264df) - Go does not provide the typical, type-driven notion of subclassing, but it does have the ability to “borrow” pieces of an implementation by embedding types within a struct or interface. In fact, type embedding is product type composition. The article explains basics behind the embedding.
