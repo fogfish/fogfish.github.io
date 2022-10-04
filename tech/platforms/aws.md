@@ -46,7 +46,14 @@ description: |
 
 [How to Model Any Relational Data in DynamoDB to Maximize Performance](https://edward-huang.com/best-practice/database/2021/04/13/how-to-model-any-relational-data-in-dynamodb-to-maximize-performance/) Designing a Database application is the first thing we usually do when we want to start working on an application. DynamoDB is popular because it was designed for enormous, high-velocity use cases, such as the Amazon shopping cart. Thus, it can’t tolerate the inconsistency and slowing performance of joins as a dataset scales. Although DynamoDB is performant, designing a data model in DynamoDB is tricky. For instance, we cannot think about how to normalize the data to avoid anomalies because DynamoDB is a NoSQL database.
 
-[The million dollar engineering problem](https://segment.com/blog/the-million-dollar-eng-problem/) how to identify and fix a problem of hot partitions at DynamoDB
+[The million dollar engineering problem](https://segment.com/blog/the-million-dollar-eng-problem/) how to identify and fix a problem of hot partitions at DynamoDB. 
+
+[Best practices for managing many-to-many relationships](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/bp-adjacency-graphs.html) Adjacency lists are a design pattern that is useful for modeling many-to-many relationships in Amazon DynamoDB. More generally, they provide a way to represent graph data (nodes and edges) in DynamoDB.
+
+[The Ten Rules for Data Modeling with DynamoDB](https://www.trek10.com/blog/the-ten-rules-for-data-modeling-with-dynamodb) Modeling your data in DynamoDB is significantly different than modeling in a traditional relational database. And if you try to model your DynamoDB table like your relational database, you'll be in a world of hurt...
+
+[Data Modeling for DynamoDB Single Table Design](https://www.sensedeep.com/blog/posts/2021/dynamodb-singletable-design.html) best practices have evolved around DynamoDB single-table design patterns where one database table serves the entire application and holds multiple different application entities.
+
 
 ## S3
 
@@ -61,12 +68,4 @@ description: |
 [Introducing AWS Lambda Extensions](https://aws.amazon.com/blogs/compute/introducing-aws-lambda-extensions-in-preview/) AWS Lambda is announcing a preview of Lambda Extensions, a new way to easily integrate Lambda with your favorite monitoring, observability, security, and governance tools. In this post I explain how Lambda extensions work, how you can begin using them, and the extensions from AWS Lambda Ready Partners that are available today.
 
 [Caching data and configuration settings with AWS Lambda extensions](https://aws.amazon.com/blogs/compute/caching-data-and-configuration-settings-with-aws-lambda-extensions/) Post shows how to build a flexible in-memory AWS Lambda caching layer using Lambda extensions. Lambda functions use REST API calls to access the data and configuration from the cache. This can reduce latency and cost when consuming data from AWS services such as Amazon DynamoDB, AWS Systems Manager Parameter Store, and AWS Secrets Manager. See [demo of the extension](https://github.com/aws-samples/aws-lambda-extensions/tree/main/cache-extension-demo).
-
-# Dynamo
-
-[Best practices for managing many-to-many relationships](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/bp-adjacency-graphs.html) Adjacency lists are a design pattern that is useful for modeling many-to-many relationships in Amazon DynamoDB. More generally, they provide a way to represent graph data (nodes and edges) in DynamoDB.
-
-[The Ten Rules for Data Modeling with DynamoDB](https://www.trek10.com/blog/the-ten-rules-for-data-modeling-with-dynamodb) Modeling your data in DynamoDB is significantly different than modeling in a traditional relational database. And if you try to model your DynamoDB table like your relational database, you'll be in a world of hurt...
-
-[Data Modeling for DynamoDB Single Table Design](https://www.sensedeep.com/blog/posts/2021/dynamodb-singletable-design.html) best practices have evolved around DynamoDB single-table design patterns where one database table serves the entire application and holds multiple different application entities.
 
