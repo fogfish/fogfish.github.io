@@ -38,3 +38,4 @@ description: |
 
 [My Philosophy on Alerting](https://docs.google.com/document/d/199PqyG3UsyXlwieHaqbGiWVa8eMWi8zzAn0YfcApr8Q/edit#) When you are auditing or writing alerting rules, consider these things to keep your oncall rotation happier.
 
+[Incident Review and Postmortem Best Practices](https://blog.pragmaticengineer.com/postmortem-best-practices/) One reason incidents are important is that they often reveal the real state of products, teams or organizations, which is often very different from the imaginary picture that engineering leaders have in their heads. Transparent incident reports and a good incident-handling strategy can inject much-needed realism into the development process.
