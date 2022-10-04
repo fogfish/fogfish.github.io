@@ -33,3 +33,8 @@ description: |
 [Designing for different states in the UI](https://uxdesign.cc/designing-for-different-ui-states-87d60130f85f) A common trap for designers is to only focus on creating designs that represent the perfect state of a user interface. It is easy to design for when everything is full of beautifully formatted content. But there is a problem with this. A large percentage of users experience completely different states. Ones that are missing data or full of errors.
 
 [Country Flags](https://github.com/hampusborgos/country-flags)
+
+## DevOps
+
+[My Philosophy on Alerting](https://docs.google.com/document/d/199PqyG3UsyXlwieHaqbGiWVa8eMWi8zzAn0YfcApr8Q/edit#) When you are auditing or writing alerting rules, consider these things to keep your oncall rotation happier.
+
