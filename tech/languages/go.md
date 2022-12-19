@@ -26,6 +26,10 @@ description: |
 
 [Golang RegExp uses linear time](https://github.com/golang/go/blob/master/src/regexp/regexp.go) The regexp implementation provided by Go is guaranteed to run in time linear in the size of the input. This is a property not guaranteed by most open source implementations of regular expressions.
 
+[Go Code Review Comments](https://github.com/golang/go/wiki/CodeReviewComments) collects common comments made during reviews of Go code, so that a single detailed explanation can be referred to by shorthands.
+
+[Go Style Decisions](https://google.github.io/styleguide/go/decisions) This document contains style decisions intended to unify and provide standard guidance, explanations, and examples for the advice given by the Go readability mentors.
+
 ## Type System
 
 [Type embedding in Go](https://travix.io/type-embedding-in-go-ba40dd4264df) - Go does not provide the typical, type-driven notion of subclassing, but it does have the ability to “borrow” pieces of an implementation by embedding types within a struct or interface. In fact, type embedding is product type composition. The article explains basics behind the embedding.
