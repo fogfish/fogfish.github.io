@@ -10,6 +10,8 @@ description: |
 
 ## Distributed Systems
 
+[PACELC: Consistency Tradeoffs in Modern Distributed Database System Design](http://www.cs.umd.edu/~abadi/papers/abadi-pacelc.pdf) In theoretical computer science, the PACELC theorem is an extension to the CAP theorem. It states that in case of network partitioning (P) in a distributed computer system, one has to choose between availability (A) and consistency (C) (as per the CAP theorem), but else (E), even when the system is running normally in the absence of partitions, one has to choose between latency (L) and consistency (C).
+
 [CAP Twelve Years Later: How the "Rules" Have Changed](https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed) - The CAP theorem asserts that any net­worked shared-data system can have only two of three desirable properties. Aspects of the CAP theorem are often misunderstood, particularly the scope of availability and consistency, which can lead to undesirable results. Articles discusses these misleading aspects.
 
 [Base: An Acid Alternative](https://queue.acm.org/detail.cfm?id=1394128) - In partitioned databases, trading some consistency for availability can lead to dramatic improvements in scalability. It discusses an applicability of persistent message queues to achieve eventual consistency and recovery from failures.
