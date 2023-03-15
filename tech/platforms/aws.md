@@ -65,6 +65,8 @@ description: |
 
 [Deep Dive on Amazon Aurora](https://av.tib.eu/media/49124) In this session we will dive deep into the unique features and changes that make up including understanding the architectural differences that contribute to improved scalability, availability and durability. Some of the items that we will cover are the elimination of checkpointing, removal of the log buffer and the use of a 4/6 quorum to improved durability and availability while reducing jitter. Other areas we will go over are improvements in vacuum and shared buffer cache as well some of our new features like Fast Clones and Performance Insight. To finish off the session we will walk through the techniques used to migrate to Aurora PostgreSQL.
 
+[Upgrading the PostgreSQL DB engine for Amazon RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_UpgradeDBInstance.PostgreSQL.html) playbook on best practices of updating AWS RDS.
+
 ## Lambda
 
 [Introducing AWS Lambda Extensions](https://aws.amazon.com/blogs/compute/introducing-aws-lambda-extensions-in-preview/) AWS Lambda is announcing a preview of Lambda Extensions, a new way to easily integrate Lambda with your favorite monitoring, observability, security, and governance tools. In this post I explain how Lambda extensions work, how you can begin using them, and the extensions from AWS Lambda Ready Partners that are available today.
