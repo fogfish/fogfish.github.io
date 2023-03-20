@@ -104,20 +104,8 @@ By the definition, ø and ƒ combinators depend on the protocol. Classical clien
 
 Using these combinators, the implementation of client / server interaction becomes straightforward. The syntax is identical to actual protocol flow, which reduces cognitive load while doing the system implementation.
 
-<div class="table-wrapper">
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: left">HTTP Request</th>
-      <th style="text-align: left">Client-side</th>
-      <th style="text-align: left">Server-side</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>
-<pre>
-<code>
+**HTTP Request**
+```
 > GET /example HTTP/1.1
 > Host: example.com
 > User-Agent: curl/7.54.0
@@ -127,12 +115,10 @@ Using these combinators, the implementation of client / server interaction becom
 < Content-Type: text/html; charset=UTF-8
 < Server: ECS (phd/FD58)
 < ...
-</code>
-</pre>
-      </th>
-      <th>
-<pre>
-<code>
+```
+
+**Client-Side**
+```golang
 http.GET(
   ø.URI("http://example.com/example"),
   ø.UserAgent.Set("curl/7.54.0"),
@@ -143,12 +129,10 @@ http.GET(
   ƒ.Server.Is("ECS (phd/FD58)"),
   ƒ.Body(/* ... */)
 )
-</code>
-</pre>
-      </th>
-      <th>
-<pre>
-<code>
+```
+
+**Server-Side**
+```golang
 http.GET(
   ƒ.URI("/example"),
   ƒ.UserAgent.Is("curl/7.54.0"),
@@ -159,13 +143,7 @@ http.GET(
   ø.Server.Set("ECS (phd/FD58)"),
   ø.Send(/* ... */)
 )
-</code>
-</pre>
-      </th>
-    </tr>
-  </tbody>
-</table>
-</div>
+```
 
 ### Generic combinators
 
