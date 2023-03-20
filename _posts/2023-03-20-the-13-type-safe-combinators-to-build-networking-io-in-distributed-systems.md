@@ -98,13 +98,74 @@ By the definition, ø and ƒ combinators depend on the protocol. Classical clien
 | Body               | `ø.Send(any)`<br/>transmits the payload to the destination URI. The combinator takes standard data types (e.g. maps, struct, etc) and encodes it to binary using Content-Type header as a hint.| `ƒ.Body[T Lens](T)`<br/> `ƒ.Bytes([]byte)`<br/> `ƒ.Match(Pattern)`<br/>consumes payload from HTTP requests and decodes the value into the type associated with the lens using Content-Type header as a hint. It fails if the body cannot be consumed.|
 | **response**       | **reader morphism**      | **writer morphism**      |
 | Status Code        | `ƒ.Status.OK`<br/> `ƒ.Code(200)`<br/> checks the code in HTTP response and fails with error if the status code does not match the expected one. The all well-known HTTP status codes are accomplished by a dedicated combinator making it typesafe.| `ø.Status.OK`<br/>declares the status of HTTP response.|
-
 | Headers            | `ƒ.Header[T Lens](string, T)`<br/> `ƒ.ContentType.ApplicationJSON`<br/> `ƒ.ContentType.Is(string)`<br/> `ƒ.ContentType.To(Lens)`<br/> matches the presence of HTTP header and its value in the response. The matching fails if the response is missing the header or its value does not correspond to the expected one. | `ø.Header[T Literals](string, T)`<br/> `ø.ContentType.ApplicationJSON`<br/> `ø.ContentType.Set(string)`<br/> declares headers and its values into HTTP response.|
 | Payload            | `ƒ.Body[T Lens](T)`<br/> `ƒ.Bytes([]byte)`<br/> `ƒ.Match(Pattern)`<br/> consumes payload from HTTP requests and decodes the value into the type associated with the lens using Content-Type header as a hint. It fails if the body cannot be consumed.| `ø.Send(any)`<br/>transmits the payload as the response on HTTP request. The combinator takes standard data types (e.g. maps, struct, etc) and encodes it to binary using Content-Type header as a hint.|
 
 
-
 Using these combinators, the implementation of client / server interaction becomes straightforward. The syntax is identical to actual protocol flow, which reduces cognitive load while doing the system implementation.
+
+<div class="table-wrapper">
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">HTTP Request</th>
+      <th style="text-align: left">Client-side</th>
+      <th style="text-align: left">Server-side</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>
+<pre>
+<code>
+> GET /example HTTP/1.1
+> Host: example.com
+> User-Agent: curl/7.54.0
+> Accept: application/json
+>
+< HTTP/1.1 200 OK
+< Content-Type: text/html; charset=UTF-8
+< Server: ECS (phd/FD58)
+< ...
+</code>
+</pre>
+      </th>
+      <th>
+<pre>
+<code>
+http.GET(
+  ø.URI("http://example.com/example"),
+  ø.UserAgent.Set("curl/7.54.0"),
+  ø.Accept.ApplicationJSON,
+
+  ƒ.Status.OK,
+  ƒ.ContentType.TextHTML,
+  ƒ.Server.Is("ECS (phd/FD58)"),
+  ƒ.Body(/* ... */)
+)
+</code>
+</pre>
+      </th>
+      <th>
+<pre>
+<code>
+http.GET(
+  ƒ.URI("/example"),
+  ƒ.UserAgent.Is("curl/7.54.0"),
+  ƒ.Accept.ApplicationJSON,
+
+  ø.Status.OK,
+  ø.ContentType.TextHTML,
+  ø.Server.Set("ECS (phd/FD58)"),
+  ø.Send(/* ... */)
+)
+</code>
+</pre>
+      </th>
+    </tr>
+  </tbody>
+</table>
+</div>
 
 ### Generic combinators
 
