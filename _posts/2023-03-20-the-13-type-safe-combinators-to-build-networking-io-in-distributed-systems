@@ -2,7 +2,8 @@
 layout: post
 title: The 13 Type Safe Combinators To Build Networking I/O In Distributed Systems
 description: |
-  
+  The post defines the basic principles of composing networking I/O. All defined combinators use standard Golang notations from which other combinator notations are constructed. Domain Specific Language built over combinators shows that any networking could be reduced to an expression purely in terms of combinators. The crucial idea here is the computational language, which delivers abstractions, where anyone can declare things and then reuse them without having to think about how they're built inside.
+
 tags:
   - coding
   - pure functional
@@ -91,6 +92,7 @@ By the definition, ø and ƒ combinators depend on the protocol. Classical clien
 |:-------------------|:-------------------------|:-------------------------|
 | request            | writer morphism          | reader morphism          |
 | HTTP Method        | ø.GET<br/>declares the verb of HTTP request | ƒ.GET<br/> matches the verb of HTTP request and fails with error if the verb does not match the expected one.|
+| 
 
 Using these combinators, the implementation of client / server interaction becomes straightforward. The syntax is identical to actual protocol flow, which reduces cognitive load while doing the system implementation.
 
