@@ -90,9 +90,19 @@ By the definition, ø and ƒ combinators depend on the protocol. Classical clien
 
 | Protocol Primitive | Client-side              | Server-side              |
 |:-------------------|:-------------------------|:-------------------------|
-| request            | writer morphism          | reader morphism          |
-| HTTP Method        | ø.GET<br/>declares the verb of HTTP request | ƒ.GET<br/> matches the verb of HTTP request and fails with error if the verb does not match the expected one.|
-| 
+| **request**        | **writer morphism**      | **reader morphism**      |
+| HTTP Method        | `ø.GET`<br/>declares the verb of HTTP request | `ƒ.GET`<br/> matches the verb of HTTP request and fails with error if the verb does not match the expected one.|
+| URI                | `ø.URI(string)`<br/>specifies target URI for HTTP request. The combinator uses absolute URI to specify target host and endpoint. | `ƒ.URI(string)`<br/>matches URL path from HTTP request. The combinator considers the URI path as an ordered sequence of segments, which are matched against a given pattern or uses a lens to extract value into the context. It fails if the path does not match the expected one.|
+| URI Query          | `ø.Params(any)`<br/> `ø.Param[T Literals](string, T)`<br/> lifts the flat structure or individual values into query parameters of specified URI.| `ƒ.Params[T Lens](T)`<br/> `ƒ.Param[T Lens](string, T)`<br/>matches the URL query string from an HTTP request. It either matches literal value or uses a lens to extract value.  It fails if the query does not match the expected one.|
+| Headers            | `ø.Header[T Literals](string, T)`<br/> `ø.ContentType.ApplicationJSON`<br/> `ø.ContentType.Set(string)`<br/>declares headers and its values into HTTP requests. The [standard HTTP headers](https://en.wikipedia.org/wiki/List_of_HTTP_header_fields) are accomplished by a dedicated combinator making it typesafe.| `ƒ.Header[T Lens](string, T)`<br/> `ƒ.ContentType.ApplicationJSON`<br/> `ƒ.ContentType.Is(string)`<br/> `ƒ.ContentType.To(Lens)`<br/>matches HTTP headers from the request. It either matches literal value or uses a lens to extract value. The standard HTTP headers are accomplished by a dedicated combinator. It fails if the header does not match the expected one.|
+| Body               | `ø.Send(any)`<br/>transmits the payload to the destination URI. The combinator takes standard data types (e.g. maps, struct, etc) and encodes it to binary using Content-Type header as a hint.| `ƒ.Body[T Lens](T)`<br/> `ƒ.Bytes([]byte)`<br/> `ƒ.Match(Pattern)`<br/>consumes payload from HTTP requests and decodes the value into the type associated with the lens using Content-Type header as a hint. It fails if the body cannot be consumed.|
+| **response**       | **reader morphism**      | **writer morphism**      |
+| Status Code        | `ƒ.Status.OK`<br/> `ƒ.Code(200)`<br/> checks the code in HTTP response and fails with error if the status code does not match the expected one. The all well-known HTTP status codes are accomplished by a dedicated combinator making it typesafe.| `ø.Status.OK`<br/>declares the status of HTTP response.|
+
+| Headers            | `ƒ.Header[T Lens](string, T)`<br/> `ƒ.ContentType.ApplicationJSON`<br/> `ƒ.ContentType.Is(string)`<br/> `ƒ.ContentType.To(Lens)`<br/> matches the presence of HTTP header and its value in the response. The matching fails if the response is missing the header or its value does not correspond to the expected one. | `ø.Header[T Literals](string, T)`<br/> `ø.ContentType.ApplicationJSON`<br/> `ø.ContentType.Set(string)`<br/> declares headers and its values into HTTP response.|
+| Payload            | `ƒ.Body[T Lens](T)`<br/> `ƒ.Bytes([]byte)`<br/> `ƒ.Match(Pattern)`<br/> consumes payload from HTTP requests and decodes the value into the type associated with the lens using Content-Type header as a hint. It fails if the body cannot be consumed.| `ø.Send(any)`<br/>transmits the payload as the response on HTTP request. The combinator takes standard data types (e.g. maps, struct, etc) and encodes it to binary using Content-Type header as a hint.|
+
+
 
 Using these combinators, the implementation of client / server interaction becomes straightforward. The syntax is identical to actual protocol flow, which reduces cognitive load while doing the system implementation.
 
