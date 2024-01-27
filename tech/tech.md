@@ -26,7 +26,7 @@ The radar is built on topic areas - quadrants. Each quadrant maintain blips and 
    <dt>Platforms and Systems</dt>
    <dd>Things that we build software on top of such as cloud platforms, operating systems, or generic kinds of platforms like distributes or actor systems.</dd> 
 
-   <dt>Tools and Components</dt>
+   <dt>Tools and Technologies</dt>
    <dd>Standalone software components such as databases, software development tools, such as versions' control systems; or more generic categories of productivity tools.</dd>
  
    <dt>Languages and Frameworks</dt>
