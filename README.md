@@ -1,6 +1,7 @@
 # https://tech.fog.fish
 
 Knowledge base for site, visit https://tech.fog.fish for best experience.
+
 ---
 
 - [Chat](/)
