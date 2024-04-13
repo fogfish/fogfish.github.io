@@ -4,3 +4,4 @@ _site
 *.sublime-*
 Gemfile.lock
 .jekyll-cache/
+_external/

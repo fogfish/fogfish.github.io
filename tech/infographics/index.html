@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <meta name="description"
+    content="Tech Radar: a tool to visualize technology choices, helps to follow up and assess upcoming technologies, to innovate on them and study news things.">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Technology Radar (2024 edition) ┆ Dmitry Kolesnikov</title>
+
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="radar.js"></script>
+
+  <link rel="stylesheet" href="radar.css">
+</head>
+
+<body>
+
+  <svg id="radar"></svg>
+
+  <script>
+    fetch('./config.json').then(function (response) {
+      return response.json();
+    }).then(function (data) {
+      radar_visualization({
+        svg_id: "radar",
+        width: 1450,
+        height: 1000,
+        colors: {
+          background: "#fff",
+          grid: '#dddde0',
+          inactive: "#ddd"
+        },
+        title: "Technology Radar (2024 edition) ┆ Dmitry Kolesnikov",
+        date: data.date,
+        quadrants: [
+          { name: "Languages and Frameworks" },
+          { name: "Tools and Technologies" },
+          { name: "Techniques and Theories" },
+          { name: "Platforms and Systems" },
+
+        ],
+        rings: [
+          { name: "ADOPT", color: "#5ba300" },
+          { name: "TRIAL", color: "#009eb0" },
+          { name: "ASSESS", color: "#c7ba00" },
+          { name: "HOLD", color: "#e09b96" }
+        ],
+        print_layout: true,
+        links_in_new_tabs: true,
+        // zoomed_quadrant: 0,
+        entries: data.entries
+      });
+    }).catch(function (err) {
+      console.log('Error loading config.json', err);
+    });
+  </script>
+
+  <table>
+    <tr>
+      <td>
+
+        <h3>What is the Tech Radar?</h3>
+
+        <p>
+          Here is my personal technology radar. It helps me to follow up and
+          assess upcoming technologies, to innovate on them and study news
+          things. We use four rings with the following semantics:
+        </p>
+
+        <ul>
+          <li><strong>ADOPT</strong> &mdash; I do have strong confidence for that and use it when appropriate in my
+            projects.</li>
+          <li><strong>TRIAL</strong> &mdash; The technology is under evaluation. I am still testing its limits or
+            learning new things about it.</li>
+          <li><strong>ASSESS</strong> &mdash; Worth exploring and building an understanding of how it impacts my
+            projects.</li>
+          <li><strong>HOLD</strong> &mdash; Proceed with caution. The technology does not have a significant impact.
+          </li>
+        </ul>
+
+      </td>
+      <td>
+
+        <h3>What is the purpose?</h3>
+
+        <p>
+          <a href="https://www.thoughtworks.com/radar">ThoughtWorks</a> maintains highlights about
+          currently interesting technologies in software development. As they
+          said - “things in motion that we think you should pay attention to and consider using in your projects”. It
+          inspires teams to pick the best technologies and tools to get the job well done.
+        </p>
+
+        <h3>How do I maintain it?</h3>
+
+        <p>
+          Every two years, I diligently update the Tech Radar by reflecting on my projects and conducting thorough
+          studies of emerging technologies. The categorization of technologies into different rings is based on
+          subjective assessment, influenced by the significance of each technology to my personal projects and
+          interests. This process involves evaluating the relevance, impact, and potential of various technologies,
+          ensuring that the Tech Radar remains a valuable resource tailored to my specific needs and objectives.
+        </p>
+
+      </td>
+    </tr>
+  </table>
+
+</body>
+
+</html>

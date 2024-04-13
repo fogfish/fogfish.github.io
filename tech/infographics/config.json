@@ -1,0 +1,390 @@
+{
+  "date": "2024.04",
+  "entries": [
+    {
+      "quadrant": 2,
+      "ring": 0,
+      "label": "Functional, Typesafe",
+      "active": true,
+      "moved": 0
+    },
+    {
+      "quadrant": 2,
+      "ring": 0,
+      "label": "Protocols Engineering",
+      "active": true,
+      "moved": 1
+    },
+    {
+      "quadrant": 2,
+      "ring": 0,
+      "label": "Distributed Systems",
+      "active": true,
+      "moved": 0
+    },
+    {
+      "quadrant": 2,
+      "ring": 0,
+      "label": "Event-driven architectures",
+      "active": true,
+      "moved": 0
+    },
+    {
+      "quadrant": 2,
+      "ring": 0,
+      "label": "Highly Scalable Systems",
+      "active": true,
+      "moved": 0
+    },
+    {
+      "quadrant": 2,
+      "ring": 0,
+      "label": "Security and Privacy",
+      "active": true,
+      "moved": 1
+    },
+    {
+      "quadrant": 2,
+      "ring": 0,
+      "label": "Open Source Software",
+      "active": true,
+      "moved": 0
+    },
+    {
+      "quadrant": 2,
+      "ring": 0,
+      "label": "User Experience",
+      "active": true,
+      "moved": 1
+    },
+    {
+      "quadrant": 2,
+      "ring": 1,
+      "label": "Observability",
+      "active": true,
+      "moved": 0
+    },
+    {
+      "quadrant": 2,
+      "ring": 1,
+      "label": "Linked Data",
+      "active": true,
+      "moved": 0
+    },
+    {
+      "quadrant": 2,
+      "ring": 1,
+      "label": "Well Architected Review",
+      "active": true,
+      "moved": 0
+    },
+    {
+      "quadrant": 2,
+      "ring": 2,
+      "label": "“Code as Crime Scene”",
+      "active": true,
+      "moved": 0
+    },
+    {
+      "quadrant": 2,
+      "ring": 2,
+      "label": "Semantic, Knowledge and Ontology",
+      "active": true,
+      "moved": 0
+    },
+    {
+      "quadrant": 2,
+      "ring": 2,
+      "label": "Data Engineering",
+      "active": true,
+      "moved": 0
+    },
+    {
+      "quadrant": 2,
+      "ring": 3,
+      "label": "Teletraffic & Performance Engineering",
+      "active": true,
+      "moved": 1
+    },
+    {
+      "quadrant": 2,
+      "ring": 3,
+      "label": "Software as a Service",
+      "active": true,
+      "moved": 1
+    },
+    {
+      "quadrant": 3,
+      "ring": 0,
+      "label": "AWS Cloud Computing",
+      "active": true,
+      "moved": 0
+    },
+    {
+      "quadrant": 3,
+      "ring": 0,
+      "label": "AWS Serverless",
+      "active": true,
+      "moved": 0
+    },
+    {
+      "quadrant": 3,
+      "ring": 0,
+      "label": "Linux",
+      "active": true,
+      "moved": 0
+    },
+    {
+      "quadrant": 3,
+      "ring": 1,
+      "label": "Containerization",
+      "active": true,
+      "moved": 0
+    },
+    {
+      "quadrant": 3,
+      "ring": 3,
+      "label": "Robotic OS",
+      "active": true,
+      "moved": 0
+    },
+    {
+      "quadrant": 3,
+      "ring": 3,
+      "label": "Actor Systems",
+      "active": true,
+      "moved": 0
+    },
+    {
+      "quadrant": 3,
+      "ring": 3,
+      "label": "iOS",
+      "active": true,
+      "moved": 0
+    },
+    {
+      "quadrant": 3,
+      "ring": 3,
+      "label": "Android",
+      "active": true,
+      "moved": 0
+    },
+    {
+      "quadrant": 1,
+      "ring": 0,
+      "label": "AWS CDK",
+      "active": true,
+      "moved": 0
+    },
+    {
+      "quadrant": 1,
+      "ring": 0,
+      "label": "RDBMS",
+      "active": true,
+      "moved": 0
+    },
+    {
+      "quadrant": 1,
+      "ring": 0,
+      "label": "NoSQL",
+      "active": true,
+      "moved": 0
+    },
+    {
+      "quadrant": 1,
+      "ring": 0,
+      "label": "Reactive Computing",
+      "active": true,
+      "moved": 0
+    },
+    {
+      "quadrant": 1,
+      "ring": 0,
+      "label": "Data Meshes",
+      "active": true,
+      "moved": 0
+    },
+    {
+      "quadrant": 1,
+      "ring": 0,
+      "label": "IAM",
+      "active": true,
+      "moved": 0
+    },
+    {
+      "quadrant": 1,
+      "ring": 1,
+      "label": "Graph DB",
+      "active": true,
+      "moved": 0
+    },
+    {
+      "quadrant": 1,
+      "ring": 1,
+      "label": "Batch processing",
+      "active": true,
+      "moved": 0
+    },
+    {
+      "quadrant": 1,
+      "ring": 1,
+      "label": "GIS",
+      "active": true,
+      "moved": 0
+    },
+    {
+      "quadrant": 1,
+      "ring": 1,
+      "label": "Zero Trust",
+      "active": true,
+      "moved": 0
+    },
+    {
+      "quadrant": 1,
+      "ring": 1,
+      "label": "AI & ML",
+      "active": true,
+      "moved": 0
+    },
+    {
+      "quadrant": 1,
+      "ring": 2,
+      "label": "Vector DB",
+      "active": true,
+      "moved": 0
+    },
+    {
+      "quadrant": 1,
+      "ring": 3,
+      "label": "Consumer Search",
+      "active": true,
+      "moved": 1
+    },
+    {
+      "quadrant": 1,
+      "ring": 3,
+      "label": "Peer-to-Peer",
+      "active": true,
+      "moved": 1
+    },
+    {
+      "quadrant": 1,
+      "ring": 3,
+      "label": "Embedded DB",
+      "active": true,
+      "moved": 1
+    },
+    {
+      "quadrant": 1,
+      "ring": 3,
+      "label": "LiDAR",
+      "active": true,
+      "moved": 1
+    },
+    {
+      "quadrant": 0,
+      "ring": 0,
+      "label": "Golang",
+      "active": true,
+      "moved": 0
+    },
+    {
+      "quadrant": 0,
+      "ring": 0,
+      "label": "Flutter",
+      "active": true,
+      "moved": 0
+    },
+    {
+      "quadrant": 0,
+      "ring": 0,
+      "label": "TypeScript",
+      "active": true,
+      "moved": 0
+    },
+    {
+      "quadrant": 0,
+      "ring": 0,
+      "label": "React",
+      "active": true,
+      "moved": 0
+    },
+    {
+      "quadrant": 0,
+      "ring": 0,
+      "label": "C",
+      "active": true,
+      "moved": 0
+    },
+    {
+      "quadrant": 0,
+      "ring": 1,
+      "label": "Python",
+      "active": true,
+      "moved": 0
+    },
+    {
+      "quadrant": 0,
+      "ring": 1,
+      "label": "Datalog",
+      "active": true,
+      "moved": 0
+    },
+    {
+      "quadrant": 0,
+      "ring": 2,
+      "label": "GraphQL",
+      "active": true,
+      "moved": 0
+    },
+    {
+      "quadrant": 0,
+      "ring": 2,
+      "label": "JSII",
+      "active": true,
+      "moved": 0
+    },
+    {
+      "quadrant": 0,
+      "ring": 3,
+      "label": "Erlang",
+      "active": true,
+      "moved": 1
+    },
+    {
+      "quadrant": 0,
+      "ring": 3,
+      "label": "Scala",
+      "active": true,
+      "moved": 1
+    },
+    {
+      "quadrant": 0,
+      "ring": 3,
+      "label": "Haskell",
+      "active": true,
+      "moved": 0
+    },
+    {
+      "quadrant": 0,
+      "ring": 3,
+      "label": "Java",
+      "active": true,
+      "moved": 0
+    },
+    {
+      "quadrant": 0,
+      "ring": 3,
+      "label": "C#",
+      "active": true,
+      "moved": 0
+    },
+    {
+      "quadrant": 0,
+      "ring": 3,
+      "label": "Akka",
+      "active": true,
+      "moved": 1
+    }
+  ]
+}
