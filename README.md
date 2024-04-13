@@ -7,7 +7,7 @@ Knowledge base for site, visit https://tech.fog.fish for best experience.
 - [Chat](/)
 - Technology Radar
   - [What is the Tech Radar?](/tech/)
-  - [Infographic](https://tech.fog.fish/statix/tech/infographics/)
+  - [Infographic](https://tech.fog.fish/tech/infographics/)
   - Quadrants
     - [Techniques and Theories](/tech/techniques-and-theories.md)
     - [Platforms and Systems](/tech/platforms-and-systems.md)
