@@ -6,6 +6,8 @@
 
 Here is my personal technology radar. It helps me to follow up and assess upcoming technologies, to innovate on them and study news things. Despite the fact that the radar is written using impersonal language, it provides value via visibility of used technologies and gained experience curve at my professional life cycle.
 
+[Download latest edition](https://tech.fog.fish/assets/Technology-Radar-vol2024.pdf). 
+
 ## How is it made?
 
 **Quadrants**. The radar is built on topic areas - quadrants. Each quadrant maintains blips and a list of knowledge materials which helps progressing with development.
