@@ -1,6 +1,7 @@
 # Highlights about technologies
 
 ## 2024
+* `27 Oct, 2024 »` [Efficient AWS only Paging Setup in 5 minutes for Small Teams: Balancing Simplicity and Automation](/posts/2024/efficient-aws-only-paging-setup-in-5-minutes-for-small-teams-balancing-simplicity-and-automation)
 * `27 Feb, 2024 »` [Blazing Fast Text Embedding Calculation With Word2Vec in Golang to Power  Extensibility of Large Language Models (LLMs)](/posts/2024/blazing-fast-embedding-with-word2vec-in-golang)
 * `20 Feb, 2024 »` [12 Golden Signals To Discover Anomalies And Performance Issues on Your AWS RDS Fleet](https://engineering.zalando.com/posts/2024/02/twelve-golden-signals-to-discover-anomalies-and-performance-issues-on-aws-rds.html)
 

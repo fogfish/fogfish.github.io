@@ -7,18 +7,18 @@ A fundamental requirement in developing such applications is the need for a form
 Generating embeddings involves the utilization of neural networks, sophisticated algorithms capable of learning intricate patterns within data. Neural networks play a pivotal role in transforming raw input, such as text, images, audio, or video, into meaningful and compact representations—these representations are the embeddings. By leveraging the power of neural networks, these embeddings capture nuanced relationships and semantic contexts, enabling computers to comprehend and process information with heightened accuracy and efficiency. As a result, the integration of embeddings into artificial intelligence applications becomes a cornerstone, facilitating a deeper understanding of the intricate associations between diverse elements in the data landscape.
 
 
-# What is the problem worth solving?
+## What is the problem worth solving?
 
 Despite the availability of commercial and open-source models, **word2vec** and its derivatives remain prevalent in building niche applications, particularly when dealing with private datasets. Python, along with the 'gensim' library, is widely adopted as the quickest means to explore the model for production-grade workloads. Gensim is optimized for performance through the use of C, BLAS, and memory-mapping. However, if your application demands even greater speed, such as performing 94K embeddings calculations per second on a single core, native development becomes the optimal solution.
 
 
-# Building Word2Vec in Golang: Optimizing Performance with Native C Integration
+## Building Word2Vec in Golang: Optimizing Performance with Native C Integration
 
-Our objective is to create a solution that allows the execution of the Word2Vec model natively within a Golang application, eliminating the need to wrap 'gensim' as a sidecar. While there are limited native Golang implementations of Word2Vec, we found https://github.com/ynqa/wego to be the most promising. However, its training attempt on the UMBC web-based corpus (approximately 3 billion words) proved to be excessively time-consuming, highlighting the need for performance optimizations.
+Our objective is to create a solution that allows the execution of the Word2Vec model natively within a Golang application, eliminating the need to wrap 'gensim' as a sidecar. While there are limited native Golang implementations of Word2Vec, we found [wego](https://github.com/ynqa/wego) to be the most promising. However, its training attempt on the UMBC web-based corpus (approximately 3 billion words) proved to be excessively time-consuming, highlighting the need for performance optimizations.
 
-Our focus shifted to leveraging native C code. Initially, we attempted to integrate the original Golang code (https://code.google.com/archive/p/word2vec/) and later explored its Mac OS X patch (https://github.com/William-Yeh/word2vec-mac). While these code bases were functional, the complexity of distilling them into a C library with a clean interface was estimated to require at least a week of effort, and there was uncertainty about the worth of such an investment.
+Our focus shifted to leveraging native C code. Initially, we attempted to integrate the [original word2vec](https://code.google.com/archive/p/word2vec/) into Golang and later explored its [Mac OS X patch](https://github.com/William-Yeh/word2vec-mac). While these code bases were functional, the complexity of distilling them into a C library with a clean interface was estimated to require at least a week of effort, and there was uncertainty about the worth of such an investment.
 
-Our final attempt involved the use of the Word2Vec C++ library developed by Max Fomichev (https://github.com/maxoodf/word2vec). This library proved to be well-architected, equipped with a cross-platform build system, and presented a clean C++ interface. Integrating it with Golang merely required the implementation of a C bridge and CGO interface. **As a result, https://github.com/fogfish/word2vec now stands as a Golang port of Max Fomichev's library, providing an efficient and performant solution for Word2Vec in a Golang environment**. 
+Our final attempt involved the use of the [Word2Vec C++ library](https://github.com/maxoodf/word2vec) developed by Max Fomichev. This library proved to be well-architected, equipped with a cross-platform build system, and presented a clean C++ interface. Integrating it with Golang merely required the implementation of a C bridge and CGO interface. **As a result, https://github.com/fogfish/word2vec now stands as a Golang port of Max Fomichev's library, providing an efficient and performant solution for Word2Vec in a Golang environment**. 
 
 The library assessment has yielded satisfactory performance results that align with the requirements of our application. The evaluation was conducted using the Apple M2 Pro, and the following notable findings were observed:
 
@@ -31,7 +31,7 @@ The library assessment has yielded satisfactory performance results that align w
 **Fact 4**: The linear performance of the library enables the production of approximately 1 billion embeddings in just 3 hours.
 
 
-# How to use word2vec in Golang
+## How to use word2vec in Golang
 
 The current version of the project doesn't provide a precompiled binary release for any platforms. To use it, you'll need to build it manually following the instructions in the README at https://github.com/fogfish/word2vec. If you encounter any difficulties or have specific requirements for a binary release, please don't hesitate to open an issue for support. Once you've successfully built the library and Golang's command-line application for your environment, ensure that the libw2v.dylib library is accessible to your dynamic linker. With these steps completed, you're ready to go!
 
@@ -71,7 +71,7 @@ vec := make([]float32, 300)
 err = w2v.Embedding("braunau was the headquarters of the commander-in-chief", vec)
 ```
 
-# Afterwords
+## Afterwords
 
 In our quest to seamlessly integrate Word2Vec into Golang, we navigated through challenges, seeking optimal performance and native efficiency. The journey began by identifying the need for a solution where Word2Vec models could be seamlessly executed within Golang applications, eliminating the necessity for additional dependencies. Evaluating existing Golang implementations led us to the promising options. However, performance constraints on the UMBC corpus sparked a pursuit of native C integration.
 
